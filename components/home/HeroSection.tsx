@@ -99,7 +99,7 @@ export function HeroSection() {
           >
             <span className="inline-flex items-center gap-2">
               <Clock className="size-4 text-brand-sun" />
-              60 min de visita
+              1h 20min de visita
             </span>
             <span className="inline-flex items-center gap-2">
               <Users className="size-4 text-brand-sun" />

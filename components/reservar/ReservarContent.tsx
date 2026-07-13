@@ -104,7 +104,7 @@ export function ReservarContent() {
               </div>
               <p className="mt-4 flex items-start gap-2 text-xs text-brand-text-muted">
                 <Check className="size-3.5 mt-0.5 shrink-0 text-brand-green" />
-                Llega 20 minutos antes de tu turno.
+                Llega 15 minutos antes, directamente a la puerta de la cueva (no al parking).
               </p>
             </div>
           </div>

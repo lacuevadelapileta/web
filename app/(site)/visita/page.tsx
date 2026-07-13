@@ -162,7 +162,7 @@ export default function VisitaPage() {
                           {t.turno}
                         </p>
                         <p className="text-xs text-brand-text-muted">
-                          Duración 60 min · Termina a las {t.fin}
+                          Duración 1h 20min · Termina a las {t.fin}
                         </p>
                       </div>
                     </div>
@@ -194,7 +194,7 @@ export default function VisitaPage() {
                           {t.turno}
                         </p>
                         <p className="text-xs text-brand-text-muted">
-                          Duración 60 min · Termina a las {t.fin}
+                          Duración 1h 20min · Termina a las {t.fin}
                         </p>
                       </div>
                     </div>
@@ -345,8 +345,9 @@ export default function VisitaPage() {
                       Parking
                     </p>
                     <p className="text-sm text-brand-text-muted">
-                      Gratuito al inicio del sendero. Desde el parking son ~10
-                      minutos a pie subiendo 101 escalones hasta la entrada.
+                      Gratuito al inicio del sendero. Desde el parking son ~5
+                      minutos subiendo 105 escalones hasta la puerta de la
+                      cueva — la cita es arriba, no en el parking.
                     </p>
                   </div>
                 </div>

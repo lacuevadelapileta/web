@@ -17,7 +17,7 @@ const cards: Card[] = [
     desc:
       "Sin luz eléctrica. La cueva se recorre como hace un siglo: lámpara en mano, descubriendo cada pintura a la luz que tú llevas.",
     meta: [
-      { icon: <Clock className="size-3.5" />, text: "60 min" },
+      { icon: <Clock className="size-3.5" />, text: "1h 20min" },
       { icon: <Users className="size-3.5" />, text: "Máx. 20" },
     ],
   },

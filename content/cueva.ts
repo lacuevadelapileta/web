@@ -31,18 +31,19 @@ export type Turno = {
 
 export const horarios = {
   laboral: [
-    { id: "lab_1", turno: "Primera visita", inicio: "11:30", fin: "12:30", aforo: 20 },
-    { id: "lab_2", turno: "Segunda visita", inicio: "13:00", fin: "14:00", aforo: 20 },
+    { id: "lab_1", turno: "Primera visita", inicio: "11:30", fin: "12:50", aforo: 20 },
+    { id: "lab_2", turno: "Segunda visita", inicio: "13:00", fin: "14:20", aforo: 20 },
+    { id: "lab_3", turno: "Tercera visita", inicio: "16:00", fin: "17:20", aforo: 20 },
   ] satisfies Turno[],
   findeSemanaFestivo: [
-    { id: "fds_1", turno: "Primera visita", inicio: "11:00", fin: "12:00", aforo: 20 },
-    { id: "fds_2", turno: "Segunda visita", inicio: "12:00", fin: "13:00", aforo: 20 },
-    { id: "fds_3", turno: "Tercera visita", inicio: "13:00", fin: "14:00", aforo: 20 },
-    { id: "fds_4", turno: "Cuarta visita", inicio: "16:00", fin: "17:00", aforo: 20 },
+    { id: "fds_1", turno: "Primera visita", inicio: "11:00", fin: "12:20", aforo: 20 },
+    { id: "fds_2", turno: "Segunda visita", inicio: "12:00", fin: "13:20", aforo: 20 },
+    { id: "fds_3", turno: "Tercera visita", inicio: "13:00", fin: "14:20", aforo: 20 },
+    { id: "fds_4", turno: "Cuarta visita", inicio: "16:00", fin: "17:20", aforo: 20 },
   ] satisfies Turno[],
   abiertoTodoElAnio: true,
   reservaAtencionHorario: "Lunes a Domingo, 10:00 – 13:00 h",
-  llegadaAnticipacion: 20,
+  llegadaAnticipacion: 15,
 }
 
 export type Tarifa = {
@@ -143,11 +144,12 @@ export const salas = [
 export const recomendaciones = [
   "Ropa cómoda y calzado cerrado con buena suela",
   "Llevar una chaqueta ligera — temperatura interior constante de 16 °C",
-  "Desde el parking hasta la entrada: 101 escalones, ~10 minutos a pie",
+  "Desde el parking hasta la puerta de la cueva: 105 escalones, ~5 minutos subiendo",
+  "La cita es en la puerta de la cueva, no en el parking — hay que subir la escalera antes de la hora del turno",
   "No apta para personas con problemas de movilidad o cardíacos severos",
   "Se facilita una lámpara portátil — no hay luz eléctrica en el interior",
   "Máximo 20 personas por grupo",
-  "Presentarse 20 minutos antes o la reserva se anula automáticamente",
+  "Presentarse 15 minutos antes en la puerta de la cueva — llegar tarde por quedarse en el parking no es excusa, la reserva se anula automáticamente",
   "Prohibido fotografiar con flash",
   "Prohibido tocar paredes o formaciones",
 ] as const
@@ -187,7 +189,7 @@ export const reviews: Review[] = [
     fecha: "2025-11-03",
     plataforma: "Google",
     texto:
-      "Fuimos con los niños y se quedaron fascinados. La sala del pez es impresionante. Reservamos por teléfono y todo perfecto, llegamos 20 min antes como nos pidieron.",
+      "Fuimos con los niños y se quedaron fascinados. La sala del pez es impresionante. Reservamos por teléfono y todo perfecto, llegamos 15 min antes en la puerta de la cueva como nos pidieron.",
   },
   {
     autor: "Lucía F.",
@@ -232,7 +234,7 @@ export const reviews: Review[] = [
     fecha: "2025-06-30",
     plataforma: "Google",
     texto:
-      "Fuimos sin esperar mucho y nos llevamos una sorpresa enorme. 60 minutos que se pasan volando. Atención impecable desde la reserva hasta la despedida. Volveremos con los abuelos.",
+      "Fuimos sin esperar mucho y nos llevamos una sorpresa enorme. Hora y veinte que se pasan volando. Atención impecable desde la reserva hasta la despedida. Volveremos con los abuelos.",
   },
 ]
 
@@ -261,11 +263,11 @@ export const mediosMencionados = [
 export const faqs = [
   {
     q: "¿Cuánto dura la visita?",
-    a: "Aproximadamente 60 minutos en el interior de la cueva. Sumado al acceso desde el parking (10 min subiendo, 10 min bajando), reserva una hora y media en total.",
+    a: "Aproximadamente 1 hora y 20 minutos en el interior de la cueva. Sumado a la subida desde el parking (~5 minutos), cuenta con hora y media larga en total.",
   },
   {
     q: "¿Es accesible para personas con movilidad reducida?",
-    a: "Lamentablemente no. El acceso desde el parking implica subir 101 escalones por la ladera y el recorrido interior tiene pasos estrechos y desniveles. No la recomendamos para personas con problemas cardíacos severos.",
+    a: "Lamentablemente no. El acceso desde el parking implica subir 105 escalones por la ladera hasta la puerta de la cueva, y el recorrido interior tiene pasos estrechos y desniveles. No la recomendamos para personas con problemas cardíacos severos.",
   },
   {
     q: "¿Se puede entrar con niños pequeños?",
@@ -281,7 +283,7 @@ export const faqs = [
   },
   {
     q: "¿Qué pasa si no llegamos a tiempo?",
-    a: "Pedimos llegar 20 minutos antes del turno. Si no os presentáis a esa hora la reserva se anula automáticamente y la plaza pasa al siguiente visitante en lista de espera.",
+    a: "Pedimos llegar 15 minutos antes del turno, ya en la puerta de la cueva (no en el parking — hay que subir antes la escalera, son unos 5 minutos). Si no os presentáis a esa hora la reserva se anula automáticamente y la plaza pasa al siguiente visitante en lista de espera; esperar abajo en el parking no cuenta como estar a tiempo.",
   },
   {
     q: "¿Hace frío dentro?",
@@ -289,7 +291,7 @@ export const faqs = [
   },
   {
     q: "¿Hay parking?",
-    a: "Sí, parking gratuito junto al inicio del sendero. Desde ahí son ~10 minutos a pie hasta la entrada de la cueva.",
+    a: "Sí, parking gratuito junto al inicio del sendero. Desde ahí son ~5 minutos subiendo una escalera de 105 escalones hasta la puerta de la cueva — la cita con el guía es arriba, en la puerta, no en el parking.",
   },
 ] as const
 

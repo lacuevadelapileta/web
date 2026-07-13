@@ -6,12 +6,12 @@ import { tarifas } from "@/content/cueva"
 
 const features: Record<string, string[]> = {
   nino: [
-    "Visita guiada de 60 minutos",
+    "Visita guiada de 1h 20min",
     "Lámpara portátil incluida",
     "Acceso a todas las salas",
   ],
   adulto: [
-    "Visita guiada de 60 minutos",
+    "Visita guiada de 1h 20min",
     "Lámpara portátil incluida",
     "Acceso a las 9 salas",
     "Guía bilingüe ES / EN",
