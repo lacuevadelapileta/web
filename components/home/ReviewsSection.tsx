@@ -55,7 +55,7 @@ function badgePlataforma(p: Review["plataforma"]) {
       return {
         label: "Booking",
         color: "bg-indigo-50 text-indigo-700 border-indigo-200",
-        icono: null,
+        icono: "/img/plataformas/booking-icon.svg",
       }
   }
 }
@@ -89,26 +89,14 @@ export function ReviewsSection() {
                 key={p.nombre}
                 className="flex items-center gap-3 rounded-2xl bg-brand-off border border-brand-blue/10 px-5 py-4"
               >
-                <span
-                  className={cn(
-                    "size-10 rounded-full font-display text-xl flex items-center justify-center shadow-brand-sm shrink-0",
-                    p.color === "blue" && "bg-brand-blue text-white",
-                    p.color === "green" && "bg-emerald-500 text-white",
-                    p.color === "navy" && "bg-indigo-600 text-white",
-                    p.icono && "bg-white border border-brand-blue/10 p-2 text-transparent"
-                  )}
-                >
-                  {p.icono ? (
-                    <Image
-                      src={p.icono}
-                      alt={p.nombre}
-                      width={24}
-                      height={24}
-                      className="size-full object-contain"
-                    />
-                  ) : (
-                    p.logo
-                  )}
+                <span className="size-10 rounded-full bg-white border border-brand-blue/10 p-2 flex items-center justify-center shadow-brand-sm shrink-0">
+                  <Image
+                    src={p.icono}
+                    alt={p.nombre}
+                    width={24}
+                    height={24}
+                    className="size-full object-contain"
+                  />
                 </span>
                 <div className="flex-1 min-w-0">
                   <p className="text-xs font-semibold uppercase tracking-widest text-brand-text-muted">
@@ -158,24 +146,17 @@ export function ReviewsSection() {
                     </div>
                     <span
                       className={cn(
-                        "shrink-0 inline-flex items-center justify-center rounded-full border",
-                        b.icono
-                          ? "size-7 p-1.5"
-                          : "gap-1.5 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-wider",
+                        "shrink-0 inline-flex items-center justify-center rounded-full border size-7 p-1.5",
                         b.color
                       )}
                     >
-                      {b.icono ? (
-                        <Image
-                          src={b.icono}
-                          alt={b.label}
-                          width={16}
-                          height={16}
-                          className="size-full object-contain"
-                        />
-                      ) : (
-                        b.label
-                      )}
+                      <Image
+                        src={b.icono}
+                        alt={b.label}
+                        width={16}
+                        height={16}
+                        className="size-full object-contain"
+                      />
                     </span>
                   </header>
 
