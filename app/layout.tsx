@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google"
+import { SITE } from "@/content/cueva"
 import "./globals.css"
 
 const jakarta = Plus_Jakarta_Sans({
@@ -33,12 +34,12 @@ export const metadata: Metadata = {
     title: "Cueva de la Pileta · Benaoján, Málaga",
     description:
       "Arte rupestre del Paleolítico Superior. Una de las cuevas mejor conservadas del mundo.",
-    url: "https://cuevadelapileta.es",
+    url: SITE.baseUrl,
     siteName: "Cueva de la Pileta",
     locale: "es_ES",
     type: "website",
   },
-  alternates: { canonical: "https://cuevadelapileta.es" },
+  alternates: { canonical: SITE.baseUrl },
 }
 
 export default function RootLayout({
