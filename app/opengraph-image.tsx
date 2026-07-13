@@ -1,3 +1,5 @@
+import { readFileSync } from "fs"
+import { join } from "path"
 import { ImageResponse } from "next/og"
 import { loadGoogleFont } from "@/lib/og-font"
 
@@ -12,6 +14,11 @@ export default async function OpengraphImage() {
     loadGoogleFont("Plus Jakarta Sans", 600, false),
   ])
 
+  const logoData = readFileSync(
+    join(process.cwd(), "public/img/logo/yegua-logo.png")
+  ).toString("base64")
+  const logoSrc = `data:image/png;base64,${logoData}`
+
   return new ImageResponse(
     (
       <div
@@ -19,8 +26,7 @@ export default async function OpengraphImage() {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
+          alignItems: "center",
           padding: "0 90px",
           background: "linear-gradient(135deg, #1A5F96 0%, #2A7FBC 100%)",
           position: "relative",
@@ -54,61 +60,80 @@ export default async function OpengraphImage() {
         <div
           style={{
             display: "flex",
-            fontFamily: "Plus Jakarta Sans",
-            fontSize: 24,
-            fontWeight: 600,
-            letterSpacing: 4,
-            textTransform: "uppercase",
-            color: "#F59E0B",
+            alignItems: "center",
+            justifyContent: "center",
+            width: 220,
+            height: 220,
+            borderRadius: 32,
+            background: "white",
+            boxShadow: "0 20px 60px rgba(0,0,0,0.25)",
+            flexShrink: 0,
           }}
         >
-          Benaoján · Málaga · Serranía de Ronda
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={logoSrc} width={160} height={160} alt="" />
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            marginTop: 28,
-            fontSize: 88,
-            lineHeight: 1.05,
-            color: "white",
-          }}
-        >
-          <span style={{ fontFamily: "Playfair Display" }}>Cueva de la&nbsp;</span>
-          <span
+        <div style={{ display: "flex", flexDirection: "column", marginLeft: 56 }}>
+          <div
             style={{
-              fontFamily: "Playfair Display",
-              fontStyle: "italic",
+              display: "flex",
+              fontFamily: "Plus Jakarta Sans",
+              fontSize: 22,
+              fontWeight: 600,
+              letterSpacing: 4,
+              textTransform: "uppercase",
               color: "#F59E0B",
             }}
           >
-            Pileta
-          </span>
-        </div>
+            Benaoján · Málaga · Serranía de Ronda
+          </div>
 
-        <div
-          style={{
-            display: "flex",
-            marginTop: 26,
-            fontFamily: "Plus Jakarta Sans",
-            fontSize: 32,
-            color: "rgba(255,255,255,0.88)",
-            maxWidth: 820,
-          }}
-        >
-          Arte rupestre de 40.000 años en el corazón de Andalucía
-        </div>
+          <div
+            style={{
+              display: "flex",
+              marginTop: 20,
+              fontSize: 72,
+              lineHeight: 1.05,
+              color: "white",
+            }}
+          >
+            <span style={{ fontFamily: "Playfair Display" }}>Cueva de la&nbsp;</span>
+            <span
+              style={{
+                fontFamily: "Playfair Display",
+                fontStyle: "italic",
+                color: "#F59E0B",
+              }}
+            >
+              Pileta
+            </span>
+          </div>
 
-        <div
-          style={{
-            display: "flex",
-            marginTop: 60,
-            fontFamily: "Plus Jakarta Sans",
-            fontSize: 24,
-            color: "rgba(255,255,255,0.65)",
-          }}
-        >
-          cuevadelapileta.com
+          <div
+            style={{
+              display: "flex",
+              marginTop: 22,
+              fontFamily: "Plus Jakarta Sans",
+              fontSize: 28,
+              color: "rgba(255,255,255,0.88)",
+              maxWidth: 700,
+            }}
+          >
+            Arte rupestre de 40.000 años en el corazón de Andalucía
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              marginTop: 40,
+              fontFamily: "Plus Jakarta Sans",
+              fontSize: 22,
+              color: "rgba(255,255,255,0.65)",
+            }}
+          >
+            cuevadelapileta.com
+          </div>
         </div>
       </div>
     ),
