@@ -4,7 +4,7 @@ export const contacto = {
   telefono: "+34 677 610 500",
   telefonoFormato: "+34 677 610 500",
   telefonoTel: "+34677610500",
-  email: "info@lacuevadelapileta.com",
+  email: "info@cuevadelapileta.com",
   horarioAtencion: "Lunes a Domingo, 10:00 – 13:00 h",
   direccion:
     "Carretera de Cortes de la Frontera, Benaoján, 29370 Málaga",
@@ -307,7 +307,7 @@ export const timelineHistoria = [
 
 export const SITE = {
   nombre: "Cueva de la Pileta",
-  baseUrl: "https://lacuevadelapileta.com",
+  baseUrl: "https://cuevadelapileta.com",
   descripcionCorta:
     "Arte rupestre paleolítico de 40.000 años en Benaoján, Málaga. A 15 km de Ronda.",
 } as const
