@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Star, Quote } from "lucide-react"
+import { Star } from "lucide-react"
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll"
 import { reviews, reviewsStats, type Review } from "@/content/cueva"
 import { cn } from "@/lib/utils"
@@ -136,7 +136,7 @@ export function ReviewsSection() {
                 delay={0.04 * (i % 6)}
                 className="mb-5 break-inside-avoid block"
               >
-                <article className="relative rounded-2xl bg-white border border-brand-blue/15 shadow-brand-sm hover:shadow-brand-md transition-shadow p-6 md:p-7">
+                <article className="rounded-2xl bg-white border border-brand-blue/15 shadow-brand-sm hover:shadow-brand-md transition-shadow p-6 md:p-7">
                   {/* Header: avatar + autor + plataforma */}
                   <header className="flex items-start gap-3">
                     <span
@@ -195,14 +195,6 @@ export function ReviewsSection() {
                   <p className="mt-3 text-[0.95rem] text-brand-text leading-relaxed">
                     &ldquo;{r.texto}&rdquo;
                   </p>
-
-                  {/* Decoración */}
-                  <Quote
-                    aria-hidden
-                    className="absolute top-6 right-6 size-6 text-brand-blue/10"
-                    fill="currentColor"
-                    strokeWidth={0}
-                  />
                 </article>
               </RevealOnScroll>
             )
