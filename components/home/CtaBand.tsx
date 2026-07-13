@@ -2,7 +2,6 @@ import Link from "next/link"
 import { Phone, Calendar, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { contacto } from "@/content/cueva"
-import { waLink } from "@/lib/whatsapp"
 
 export function CtaBand() {
   return (
@@ -47,26 +46,16 @@ export function CtaBand() {
           </Link>
         </div>
 
-        <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-5">
-          <a
-            href={`tel:${contacto.telefonoTel}`}
-            className="inline-flex items-center gap-2.5 text-sm font-medium text-white/85 hover:text-white transition-colors"
-          >
-            <Phone className="size-4" />
-            <span>
-              <strong className="text-white">{contacto.telefono}</strong>
-              <span className="text-white/65"> · Atención {contacto.horarioAtencion}</span>
-            </span>
-          </a>
-          <a
-            href={waLink()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-white hover:text-brand-sun transition-colors"
-          >
-            Escríbenos por WhatsApp
-          </a>
-        </div>
+        <a
+          href={`tel:${contacto.telefonoTel}`}
+          className="mt-9 inline-flex items-center gap-2.5 text-sm font-medium text-white/85 hover:text-white transition-colors"
+        >
+          <Phone className="size-4" />
+          <span>
+            <strong className="text-white">{contacto.telefono}</strong>
+            <span className="text-white/65"> · Atención {contacto.horarioAtencion}</span>
+          </span>
+        </a>
       </div>
     </section>
   )

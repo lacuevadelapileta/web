@@ -2,13 +2,13 @@ import Image from "next/image"
 import Link from "next/link"
 import {
   Phone,
+  Mail,
   MapPin,
   Clock,
   Calendar as CalIcon,
   Car,
   AlertTriangle,
   Info,
-  MessageCircle,
 } from "lucide-react"
 import {
   Tabs,
@@ -32,7 +32,6 @@ import {
   faqs,
 } from "@/content/cueva"
 import { imagenes } from "@/content/imagenes"
-import { waLink } from "@/lib/whatsapp"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -93,13 +92,13 @@ export default function VisitaPage() {
                     Reservar visita
                   </Button>
                 </Link>
-                <a href={waLink()} target="_blank" rel="noopener noreferrer">
+                <a href="mailto:info@cuevadelapileta.es">
                   <Button
                     variant="outline"
                     className="w-full h-12 bg-transparent border-[1.5px] border-white/70 text-white hover:bg-white/10 hover:text-white font-semibold rounded-lg"
                   >
-                    <MessageCircle className="size-4 mr-2" />
-                    WhatsApp
+                    <Mail className="size-4 mr-2" />
+                    Email
                   </Button>
                 </a>
               </div>

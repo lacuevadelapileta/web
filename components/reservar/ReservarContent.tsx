@@ -6,7 +6,6 @@ import Link from "next/link"
 import {
   ArrowLeft,
   Phone,
-  MessageCircle,
   Clock,
   Check,
 } from "lucide-react"
@@ -14,7 +13,6 @@ import { Button } from "@/components/ui/button"
 import { FechaTurnoPicker } from "@/components/reservar/FechaTurnoPicker"
 import { contacto, tarifas, horarios } from "@/content/cueva"
 import { formatFechaLarga, turnosDeFecha } from "@/lib/fechas"
-import { waLink } from "@/lib/whatsapp"
 
 export function ReservarContent() {
   const params = useSearchParams()
@@ -38,15 +36,6 @@ export function ReservarContent() {
     [fecha, turnoId]
   )
 
-  const mensajeWhatsapp = useMemo(() => {
-    if (fecha && turno) {
-      return `Hola, quiero reservar visita a la Cueva de la Pileta para el ${formatFechaLarga(
-        fecha
-      )}, turno de ${turno.inicio} (${turno.turno}). ¿Está disponible ese turno? Si no, ¿cuál tenéis libre ese día?`
-    }
-    return "Hola, quiero reservar visita a la Cueva de la Pileta. ¿Qué turnos tenéis disponibles?"
-  }, [fecha, turno])
-
   return (
     <div className="bg-brand-off min-h-[calc(100vh-72px)]">
       <div className="container-pileta py-8 md:py-14">
@@ -62,9 +51,9 @@ export function ReservarContent() {
           Reserva tu visita
         </h1>
         <p className="mt-3 max-w-2xl text-brand-text-muted">
-          Las reservas se gestionan de forma personal, por WhatsApp o
-          teléfono — no hay pago online. Elige la fecha y el turno que
-          prefieras y te confirmamos plaza al momento.
+          Las reservas se gestionan de forma personal, por teléfono — no hay
+          pago online. Elige la fecha y el turno que prefieras y te
+          confirmamos plaza al momento.
         </p>
 
         <div className="mt-8 grid lg:grid-cols-[1fr_360px] gap-8 items-start">
@@ -95,30 +84,16 @@ export function ReservarContent() {
                 )}
               </p>
 
-              <div className="mt-5 flex flex-col sm:flex-row gap-3">
-                <a
-                  href={waLink(mensajeWhatsapp)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1"
-                >
-                  <Button className="w-full h-12 bg-brand-green hover:bg-emerald-600 text-white font-semibold rounded-lg shadow-brand-sm">
-                    <MessageCircle className="size-4 mr-2" />
-                    Reservar por WhatsApp
-                  </Button>
-                </a>
-                <a href={`tel:${contacto.telefonoTel}`} className="flex-1">
-                  <Button
-                    variant="outline"
-                    className="w-full h-12 border-[1.5px] border-brand-blue text-brand-blue hover:bg-brand-blue-light font-semibold rounded-lg bg-white"
-                  >
+              <div className="mt-5">
+                <a href={`tel:${contacto.telefonoTel}`}>
+                  <Button className="w-full h-12 bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold rounded-lg shadow-brand-sm">
                     <Phone className="size-4 mr-2" />
                     Llamar ahora
                   </Button>
                 </a>
               </div>
               <p className="mt-3 text-xs text-brand-text-muted">
-                Atención telefónica y WhatsApp: {contacto.horarioAtencion}
+                Atención telefónica: {contacto.horarioAtencion}
               </p>
             </div>
           </div>

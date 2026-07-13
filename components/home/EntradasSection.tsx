@@ -130,7 +130,7 @@ export function EntradasSection() {
                   {!t.requiereContacto && (
                     <div className="mt-3 flex items-center justify-center gap-1.5 rounded-lg bg-brand-green-light px-3 py-1.5 text-[0.72rem] font-semibold text-brand-green">
                       <span className="size-1.5 rounded-full bg-brand-green" />
-                      Reserva por WhatsApp o teléfono
+                      Reserva por teléfono
                     </div>
                   )}
                 </article>

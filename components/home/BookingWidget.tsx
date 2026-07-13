@@ -1,7 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { Calendar as CalendarIcon, MessageCircle } from "lucide-react"
+import { Calendar as CalendarIcon, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Select,
@@ -10,9 +10,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { horarios } from "@/content/cueva"
+import { contacto, horarios } from "@/content/cueva"
 import { formatFechaLarga } from "@/lib/fechas"
-import { waLink } from "@/lib/whatsapp"
 
 function isWeekend(dateStr: string): boolean {
   if (!dateStr) return false
@@ -39,12 +38,12 @@ export function BookingWidget() {
 
   const turno = turnos.find((t) => t.id === turnoId) ?? null
 
-  const mensaje = useMemo(() => {
+  const resumen = useMemo(() => {
     if (fecha && turno) {
       const fechaLarga = formatFechaLarga(new Date(`${fecha}T12:00:00`))
-      return `Hola, quiero reservar visita a la Cueva de la Pileta para el ${fechaLarga}, turno de ${turno.inicio} (${turno.turno}). ¿Está disponible ese turno? Si no, ¿cuál tenéis libre ese día?`
+      return `${fechaLarga}, turno de ${turno.inicio} (${turno.turno})`
     }
-    return undefined
+    return null
   }, [fecha, turno])
 
   return (
@@ -103,28 +102,22 @@ export function BookingWidget() {
           </div>
 
           <div className="sm:self-end">
-            <a
-              href={waLink(mensaje)}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-disabled={!fecha || !turnoId}
-              onClick={(e) => {
-                if (!fecha || !turnoId) e.preventDefault()
-              }}
-            >
-              <Button
-                disabled={!fecha || !turnoId}
-                className="h-11 w-full sm:w-auto px-5 bg-brand-green hover:bg-emerald-600 text-white font-semibold rounded-lg shadow-brand-sm disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                <MessageCircle className="size-4 mr-2" />
-                WhatsApp
+            <a href={`tel:${contacto.telefonoTel}`}>
+              <Button className="h-11 w-full sm:w-auto px-5 bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold rounded-lg shadow-brand-sm">
+                <Phone className="size-4 mr-2" />
+                Llamar
               </Button>
             </a>
           </div>
         </div>
 
-        <p className="mt-3 text-xs text-brand-text-muted">
-          Reservamos por WhatsApp o teléfono — sin pago online.
+        {resumen && (
+          <p className="mt-3 text-xs font-medium text-brand-blue">
+            Al llamar, menciona: {resumen}
+          </p>
+        )}
+        <p className="mt-1.5 text-xs text-brand-text-muted">
+          Reservamos por teléfono — sin pago online.
         </p>
       </div>
     </div>

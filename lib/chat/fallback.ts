@@ -52,7 +52,7 @@ const KB: FaqEntry[] = [
   },
   {
     q: "Reservar",
-    a: "Las reservas se hacen por WhatsApp o teléfono, sin pago online. Elige fecha y turno en /reservar y te confirmamos la plaza al momento.",
+    a: "Las reservas se hacen por teléfono, sin pago online. Elige fecha y turno en /reservar y llama para confirmar la plaza.",
     tokens: tokens("reservar reserva booking comprar entradas tickets online"),
   },
   {
@@ -98,7 +98,7 @@ export function fallbackAnswer(userMessage: string): FallbackResponse {
   if (!best || best.score < 0.08) {
     return {
       text:
-        "No estoy segura de eso. ¿Te paso con una persona del equipo por WhatsApp?",
+        "No estoy segura de eso. ¿Te paso el teléfono para que hables con alguien del equipo?",
       confidence: 0,
       escalate: true,
     }

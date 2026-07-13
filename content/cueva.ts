@@ -179,7 +179,7 @@ export const reviews: Review[] = [
     fecha: "2025-11-03",
     plataforma: "Google",
     texto:
-      "Fuimos con los niños y se quedaron fascinados. La sala del pez es impresionante. Reservamos por WhatsApp y todo perfecto, llegamos 20 min antes como nos pidieron.",
+      "Fuimos con los niños y se quedaron fascinados. La sala del pez es impresionante. Reservamos por teléfono y todo perfecto, llegamos 20 min antes como nos pidieron.",
   },
   {
     autor: "Lucía F.",

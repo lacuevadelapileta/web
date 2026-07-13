@@ -25,14 +25,11 @@ const BIENVENIDA: Msg = {
   id: "welcome",
   role: "assistant",
   text:
-    "¡Hola! Soy Pilar, la asistente virtual de la Cueva de la Pileta. Pregúntame por horarios, precios, accesibilidad o cómo llegar. Si no sé algo, te paso con una persona.",
+    "¡Hola! Soy Pilar, la asistente virtual de la Cueva de la Pileta. Pregúntame por horarios, precios, accesibilidad o cómo llegar. Si no sé algo, te doy el teléfono para que hables con el equipo.",
   ts: 0,
 }
 
-function wa(text: string): string {
-  const phone = contacto.telefonoTel.replace(/[^0-9]/g, "")
-  return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`
-}
+const TEL_LINK = `tel:${contacto.telefonoTel}`
 
 export function ChatWidget() {
   const [open, setOpen] = useState(false)
@@ -91,7 +88,7 @@ export function ChatWidget() {
         {
           id: crypto.randomUUID(),
           role: "assistant",
-          text: "No he podido conectarme. ¿Probamos por WhatsApp?",
+          text: "No he podido conectarme. ¿Prefieres llamarnos?",
           escalate: true,
           ts: Date.now(),
         },
@@ -104,15 +101,6 @@ export function ChatWidget() {
   function onSubmit(e: React.FormEvent) {
     e.preventDefault()
     enviar(input)
-  }
-
-  // Última conversación como contexto para el WhatsApp pre-rellenado
-  function whatsappLink(): string {
-    const lastUser = [...messages].reverse().find((m) => m.role === "user")
-    const txt = lastUser
-      ? `Hola, quiero más info. Mi duda: ${lastUser.text}`
-      : "Hola, quiero más info sobre la visita a la Cueva de la Pileta."
-    return wa(txt)
   }
 
   return (
@@ -207,7 +195,7 @@ export function ChatWidget() {
               className="flex-1 overflow-y-auto px-4 py-4 space-y-3 bg-brand-off"
             >
               {messages.map((m) => (
-                <Bubble key={m.id} msg={m} whatsappLink={whatsappLink()} />
+                <Bubble key={m.id} msg={m} />
               ))}
               {enviando && (
                 <div className="flex items-end gap-2">
@@ -269,14 +257,12 @@ export function ChatWidget() {
             </form>
 
             <p className="text-[0.65rem] text-brand-text-muted text-center px-4 pb-2 bg-white">
-              ¿Prefieres una persona?{" "}
+              ¿Prefieres hablar con alguien?{" "}
               <a
-                href={whatsappLink()}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={TEL_LINK}
                 className="font-semibold text-brand-green hover:underline"
               >
-                Hablar por WhatsApp
+                Llamar ahora
               </a>
             </p>
           </motion.div>
@@ -286,7 +272,7 @@ export function ChatWidget() {
   )
 }
 
-function Bubble({ msg, whatsappLink }: { msg: Msg; whatsappLink: string }) {
+function Bubble({ msg }: { msg: Msg }) {
   const isUser = msg.role === "user"
   return (
     <div className={cn("flex", isUser ? "justify-end" : "justify-start")}>
@@ -301,13 +287,11 @@ function Bubble({ msg, whatsappLink }: { msg: Msg; whatsappLink: string }) {
         <p className="whitespace-pre-wrap">{msg.text}</p>
         {!isUser && msg.escalate && (
           <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={TEL_LINK}
             className="mt-3 inline-flex items-center gap-2 rounded-lg bg-brand-green hover:bg-emerald-600 text-white px-3 py-1.5 text-xs font-semibold transition-colors"
           >
             <Phone className="size-3.5" />
-            Hablar por WhatsApp
+            Llamar ahora
           </a>
         )}
       </div>

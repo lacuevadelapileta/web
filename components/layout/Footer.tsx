@@ -1,7 +1,6 @@
 import Link from "next/link"
-import { Instagram, Phone, Mail, MapPin, MessageCircle } from "lucide-react"
+import { Instagram, Phone, Mail, MapPin } from "lucide-react"
 import { contacto, SITE } from "@/content/cueva"
-import { waLink } from "@/lib/whatsapp"
 
 export function Footer() {
   return (
@@ -128,17 +127,6 @@ export function Footer() {
                 <Phone className="size-4 mt-0.5 shrink-0 text-brand-blue" />
                 <a href={`tel:${contacto.telefonoTel}`} className="hover:text-white">
                   {contacto.telefono}
-                </a>
-              </li>
-              <li className="flex items-start gap-2 text-white/75">
-                <MessageCircle className="size-4 mt-0.5 shrink-0 text-brand-blue" />
-                <a
-                  href={waLink()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white"
-                >
-                  Reservar por WhatsApp
                 </a>
               </li>
               <li className="flex items-start gap-2 text-white/75">
