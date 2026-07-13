@@ -63,9 +63,9 @@ export function Navbar() {
                   : "/img/logo/yegua-logo.png"
               }
               alt=""
-              width={32}
-              height={32}
-              className="size-7 md:size-8 w-auto object-contain transition-opacity duration-500"
+              width={48}
+              height={48}
+              className="size-10 md:size-12 w-auto object-contain transition-opacity duration-500"
             />
             <span className="flex items-baseline gap-1.5 leading-none">
             <span
@@ -161,9 +161,9 @@ export function Navbar() {
                     <Image
                       src="/img/logo/yegua-logo.png"
                       alt=""
-                      width={28}
-                      height={28}
-                      className="size-7 w-auto object-contain"
+                      width={40}
+                      height={40}
+                      className="size-9 w-auto object-contain"
                     />
                     <span className="flex items-baseline gap-1.5">
                       <span className="text-xs font-semibold tracking-[0.18em] uppercase text-brand-text">
