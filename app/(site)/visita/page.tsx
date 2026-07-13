@@ -92,7 +92,7 @@ export default function VisitaPage() {
                     Reservar visita
                   </Button>
                 </Link>
-                <a href="mailto:info@cuevadelapileta.es">
+                <a href={`mailto:${contacto.email}`}>
                   <Button
                     variant="outline"
                     className="w-full h-12 bg-transparent border-[1.5px] border-white/70 text-white hover:bg-white/10 hover:text-white font-semibold rounded-lg"

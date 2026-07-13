@@ -4,6 +4,7 @@ export const contacto = {
   telefono: "+34 677 610 500",
   telefonoFormato: "+34 677 610 500",
   telefonoTel: "+34677610500",
+  email: "info@lacuevadelapileta.com",
   horarioAtencion: "Lunes a Domingo, 10:00 – 13:00 h",
   direccion:
     "Carretera de Cortes de la Frontera, Benaoján, 29370 Málaga",
@@ -11,6 +12,13 @@ export const contacto = {
   instagram: "https://www.instagram.com/cuevadelapileta/",
   googleMapsEmbed:
     "https://maps.google.com/maps?q=36.6912648721628,-5.352283923237764&z=15&output=embed",
+}
+
+export const empresa = {
+  razonSocial: "José Antonio y José Bullón Giménez S.C. Herederos de Tomás Bullón García",
+  nombreComercial: "Cueva de la Pileta",
+  nif: "J29839891",
+  domicilioFiscal: "Calle Cueva de la Pileta, Benaoján, 29370 Málaga",
 }
 
 export type Turno = {
@@ -299,7 +307,7 @@ export const timelineHistoria = [
 
 export const SITE = {
   nombre: "Cueva de la Pileta",
-  baseUrl: "https://cuevadelapileta.es",
+  baseUrl: "https://lacuevadelapileta.com",
   descripcionCorta:
     "Arte rupestre paleolítico de 40.000 años en Benaoján, Málaga. A 15 km de Ronda.",
 } as const

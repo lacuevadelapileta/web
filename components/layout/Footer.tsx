@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Instagram, Phone, Mail, MapPin } from "lucide-react"
 import { contacto, SITE } from "@/content/cueva"
+import { GestionarCookiesButton } from "@/components/cookies/GestionarCookiesButton"
 
 export function Footer() {
   return (
@@ -132,10 +133,10 @@ export function Footer() {
               <li className="flex items-start gap-2 text-white/75">
                 <Mail className="size-4 mt-0.5 shrink-0 text-brand-blue" />
                 <a
-                  href="mailto:info@cuevadelapileta.es"
+                  href={`mailto:${contacto.email}`}
                   className="hover:text-white break-all"
                 >
-                  info@cuevadelapileta.es
+                  {contacto.email}
                 </a>
               </li>
               <li className="flex items-start gap-2 text-white/75">
@@ -165,6 +166,7 @@ export function Footer() {
             <Link href="/cookies" className="hover:text-white transition-colors">
               Cookies
             </Link>
+            <GestionarCookiesButton />
           </div>
         </div>
       </div>

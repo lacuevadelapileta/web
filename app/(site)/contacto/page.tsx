@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import {
   Phone,
   Mail,
@@ -91,10 +92,10 @@ export default function ContactoPage() {
                     Email
                   </p>
                   <a
-                    href="mailto:info@cuevadelapileta.es"
+                    href={`mailto:${contacto.email}`}
                     className="mt-1 block font-semibold text-brand-text break-all hover:text-brand-blue transition-colors"
                   >
-                    info@cuevadelapileta.es
+                    {contacto.email}
                   </a>
                   <p className="mt-2 text-xs text-brand-text-muted">
                     Respuesta en 24-48h laborables
@@ -198,8 +199,12 @@ export default function ContactoPage() {
                         className="mt-0.5 border-brand-blue/30 data-[state=checked]:bg-brand-blue data-[state=checked]:border-brand-blue"
                       />
                       <span className="text-xs text-brand-text-muted leading-relaxed">
-                        Acepto la política de privacidad y el tratamiento de mis
-                        datos para responderme a esta consulta.
+                        Acepto la{" "}
+                        <Link href="/privacidad" className="text-brand-blue hover:underline">
+                          política de privacidad
+                        </Link>{" "}
+                        y el tratamiento de mis datos para responderme a esta
+                        consulta.
                       </span>
                     </label>
 

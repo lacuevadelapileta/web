@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar"
 import { NavSpacer } from "@/components/layout/NavSpacer"
 import { Footer } from "@/components/layout/Footer"
 import { ChatWidget } from "@/components/chat/ChatWidget"
+import { CookieBanner } from "@/components/cookies/CookieBanner"
 
 export default function SiteLayout({
   children,
@@ -15,6 +16,7 @@ export default function SiteLayout({
       <main className="flex-1">{children}</main>
       <Footer />
       <ChatWidget />
+      <CookieBanner />
     </div>
   )
 }
