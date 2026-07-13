@@ -88,47 +88,47 @@ export const salas = [
   {
     n: "01",
     nombre: "Galería de los Murciélagos",
-    desc: "Miles de murciélagos en las alturas. El inicio del recorrido.",
+    desc: "Sala de más de 15 m de altura por la que salen cada noche miles de murciélagos — se calculan unos 18.000, de 12 especies distintas.",
   },
   {
     n: "02",
     nombre: "Sala del Castillo",
-    desc: "Primeras pinturas en ocre: toros y caballos del Solutrense.",
+    desc: "Amplia sala con una gran formación calcárea que recuerda a un castillo. Restos cerámicos del Neolítico y la Edad del Metal, entre 3.000 y 9.000 años.",
   },
   {
     n: "03",
     nombre: "Nave Central",
-    desc: "60 metros de longitud, hasta 15 m de altura. El corazón de la cueva.",
+    desc: "60 metros de longitud, hasta 15 m de altura. Aquí comienzan las pinturas: símbolos solutrenses de hace unos 22.000 años y figuras de caballos en ocre y rojo.",
   },
   {
     n: "04",
     nombre: "Las Termópilas",
-    desc: "Paso estrecho entre formaciones. 16 °C constantes todo el año.",
+    desc: "Paso estrecho que conecta con el Salón del Lago. Temperatura constante todo el año, con humedad relativa superior al 60% en época seca.",
   },
   {
     n: "05",
     nombre: "Salón del Lago",
-    desc: "Lago subterráneo con reflejos de estalactitas milenarias.",
+    desc: "Lago subterráneo con pinturas de tres bóvidos de distintas épocas del Paleolítico (entre 10.000 y 40.000 años) y, frente al lago, signos neolíticos de unos 5.000 años.",
   },
   {
     n: "06",
     nombre: "El Desfiladero",
-    desc: "Concentración de signos abstractos. Entre los más antiguos de la cueva.",
+    desc: "Pasillo estrecho de 7-8 m de altura donde parece que la cueva termina — pero da paso a las salas más importantes del recorrido. Concentración de signos abstractos, de los más antiguos de la cueva.",
   },
   {
     n: "07",
     nombre: "Los Órganos",
-    desc: "Columnas de estalactitas y estalagmitas fusionadas.",
+    desc: "Formación donde estalactitas y estalagmitas se fusionan en columnas con forma de tubos de órgano.",
   },
   {
     n: "08",
     nombre: "Baño de la Reina Mora",
-    desc: "Oquedad con pinturas en rojo y leyenda local.",
+    desc: "Pequeño lago de agua cristalina que se mantiene a 12 °C constantes, con reflejos y goteo continuo. Apenas hay pinturas, pero es uno de los rincones más bonitos del recorrido.",
   },
   {
     n: "09",
     nombre: "Sala del Pez",
-    desc: "Pez de 1,5 m pintado en ocre. ~20.000 a.C. La joya de La Pileta.",
+    desc: "Una de las salas más grandes de la cueva, con pintura neolítica y de la Edad del Metal (entre 3.000 y 9.000 años). Al fondo, el gran Pez de 1,20 m, datado en unos 20.000 años y de características marinas, con una foca pintada en su interior — una de las representaciones más singulares del arte rupestre europeo. También hay figuras de lince y cabras, del Paleolítico (entre 10.000 y 40.000 años).",
   },
 ] as const
 
