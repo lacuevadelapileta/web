@@ -189,7 +189,7 @@ export function ReviewsSection() {
         <RevealOnScroll delay={0.1}>
           <div className="mt-14 text-center">
             <a
-              href="https://www.google.com/maps/place/Cueva+de+la+Pileta"
+              href="https://www.google.com/maps?cid=11273395000893348274"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-brand-blue-dark"
