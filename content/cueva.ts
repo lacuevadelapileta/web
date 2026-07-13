@@ -233,9 +233,9 @@ export const reviewsStats = {
   total: 2547,
   destacadas: 4,
   porPlataforma: [
-    { nombre: "Google", logo: "G", rating: 4.8, total: 1842, color: "blue" },
-    { nombre: "TripAdvisor", logo: "T", rating: 4.9, total: 503, color: "green" },
-    { nombre: "Booking", logo: "B", rating: 4.7, total: 202, color: "navy" },
+    { nombre: "Google", logo: "G", icono: "/img/plataformas/google-icon.svg", rating: 4.8, total: 1842, color: "blue" },
+    { nombre: "TripAdvisor", logo: "T", icono: null, rating: 4.9, total: 503, color: "green" },
+    { nombre: "Booking", logo: "B", icono: null, rating: 4.7, total: 202, color: "navy" },
   ],
 } as const
 

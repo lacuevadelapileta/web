@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Star, Quote } from "lucide-react"
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll"
 import { reviews, reviewsStats, type Review } from "@/content/cueva"
@@ -39,11 +40,23 @@ function fechaRelativa(iso: string): string {
 function badgePlataforma(p: Review["plataforma"]) {
   switch (p) {
     case "Google":
-      return { label: "Google", color: "bg-blue-50 text-blue-700 border-blue-200" }
+      return {
+        label: "Google",
+        color: "bg-blue-50 text-blue-700 border-blue-200",
+        icono: "/img/plataformas/google-icon.svg",
+      }
     case "TripAdvisor":
-      return { label: "TripAdvisor", color: "bg-emerald-50 text-emerald-700 border-emerald-200" }
+      return {
+        label: "TripAdvisor",
+        color: "bg-emerald-50 text-emerald-700 border-emerald-200",
+        icono: null,
+      }
     case "Booking":
-      return { label: "Booking", color: "bg-indigo-50 text-indigo-700 border-indigo-200" }
+      return {
+        label: "Booking",
+        color: "bg-indigo-50 text-indigo-700 border-indigo-200",
+        icono: null,
+      }
   }
 }
 
@@ -78,13 +91,24 @@ export function ReviewsSection() {
               >
                 <span
                   className={cn(
-                    "size-10 rounded-full font-display text-xl flex items-center justify-center shadow-brand-sm",
+                    "size-10 rounded-full font-display text-xl flex items-center justify-center shadow-brand-sm shrink-0",
                     p.color === "blue" && "bg-brand-blue text-white",
                     p.color === "green" && "bg-emerald-500 text-white",
-                    p.color === "navy" && "bg-indigo-600 text-white"
+                    p.color === "navy" && "bg-indigo-600 text-white",
+                    p.icono && "bg-white border border-brand-blue/10 p-2 text-transparent"
                   )}
                 >
-                  {p.logo}
+                  {p.icono ? (
+                    <Image
+                      src={p.icono}
+                      alt={p.nombre}
+                      width={24}
+                      height={24}
+                      className="size-full object-contain"
+                    />
+                  ) : (
+                    p.logo
+                  )}
                 </span>
                 <div className="flex-1 min-w-0">
                   <p className="text-xs font-semibold uppercase tracking-widest text-brand-text-muted">
@@ -134,10 +158,20 @@ export function ReviewsSection() {
                     </div>
                     <span
                       className={cn(
-                        "shrink-0 inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-wider",
+                        "shrink-0 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-wider",
                         b.color
                       )}
                     >
+                      {b.icono && (
+                        <Image
+                          src={b.icono}
+                          alt=""
+                          aria-hidden
+                          width={12}
+                          height={12}
+                          className="size-3 object-contain"
+                        />
+                      )}
                       {b.label}
                     </span>
                   </header>
