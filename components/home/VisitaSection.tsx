@@ -60,7 +60,7 @@ export function VisitaSection() {
             </h2>
             <p className="mt-4 text-brand-text-muted text-base md:text-lg leading-relaxed">
               Sin barreras, sin luces eléctricas, sin multitudes. Solo tú, una
-              lámpara y 33.000 años de historia.
+              lámpara y 40.000 años de historia.
             </p>
           </div>
         </RevealOnScroll>

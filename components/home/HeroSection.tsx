@@ -70,7 +70,7 @@ export function HeroSection() {
             variants={item}
             className="mt-6 text-lg md:text-2xl text-white/85 leading-relaxed max-w-[52ch] drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]"
           >
-            Arte rupestre de 33.000 años en el corazón de Andalucía. Una
+            Arte rupestre de 40.000 años en el corazón de Andalucía. Una
             experiencia única, con lámpara en la mano, sin filas ni museos.
           </motion.p>
 

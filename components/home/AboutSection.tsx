@@ -45,7 +45,7 @@ export function AboutSection() {
               <p className="mt-5 text-base md:text-[1.05rem] text-brand-text-muted leading-relaxed">
                 En 1905, José Bullón Lobato entró en una grieta de la Sierra de
                 Líbar buscando guano de murciélago para fertilizar sus campos. Lo
-                que encontró fueron pinturas de 33.000 años, uno de los conjuntos
+                que encontró fueron pinturas de 40.000 años, uno de los conjuntos
                 de arte rupestre paleolítico más importantes de Europa.
               </p>
             </RevealOnScroll>

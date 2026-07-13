@@ -16,7 +16,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Historia y Pinturas — Cueva de la Pileta",
   description:
-    "120 años custodiada por la familia Bullón. Descubre la historia de la Cueva de la Pileta, sus pinturas rupestres de 33.000 años y las 9 salas que componen el recorrido.",
+    "120 años custodiada por la familia Bullón. Descubre la historia de la Cueva de la Pileta, sus pinturas rupestres de 40.000 años y las 9 salas que componen el recorrido.",
 }
 
 const pinturasDestacadas = [
@@ -46,7 +46,7 @@ const pinturasDestacadas = [
   },
   {
     nombre: "Los Signos Abstractos",
-    edad: "~33.000 a.C.",
+    edad: "~40.000 a.C.",
     desc: "Tectiformes y trazos geométricos repartidos por toda la cueva. Las pinturas más antiguas.",
     color: "bg-brand-blue-light text-brand-blue",
   },
@@ -165,7 +165,7 @@ export default function LaCuevaPage() {
                 Cinco obras que <em>no encontrarás</em> en ningún museo
               </h2>
               <p className="mt-4 text-brand-text-muted text-lg leading-relaxed">
-                Más de 300 figuras y signos en total. Estas son las que más
+                Más de 3.000 figuras y grabados en total. Estas son las que más
                 conmueven a los visitantes.
               </p>
             </div>

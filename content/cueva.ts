@@ -78,8 +78,8 @@ export const tarifas: Tarifa[] = [
 ]
 
 export const stats = [
-  { valor: 33000, sufijo: "", prefijo: "", unidad: "años a.C.", label: "Pinturas más antiguas", formatear: true },
-  { valor: 300, sufijo: "", prefijo: "+", unidad: "", label: "Figuras y grabados", formatear: false },
+  { valor: 40000, sufijo: "", prefijo: "", unidad: "años a.C.", label: "Pinturas más antiguas", formatear: true },
+  { valor: 3000, sufijo: "", prefijo: "+", unidad: "", label: "Figuras y grabados", formatear: false },
   { valor: 500, sufijo: " m", prefijo: "", unidad: "", label: "Recorrido de visita", formatear: false },
   { valor: 1905, sufijo: "", prefijo: "", unidad: "", label: "Año del descubrimiento", formatear: false },
 ] as const
@@ -301,5 +301,5 @@ export const SITE = {
   nombre: "Cueva de la Pileta",
   baseUrl: "https://cuevadelapileta.es",
   descripcionCorta:
-    "Arte rupestre paleolítico de 33.000 años en Benaoján, Málaga. A 15 km de Ronda.",
+    "Arte rupestre paleolítico de 40.000 años en Benaoján, Málaga. A 15 km de Ronda.",
 } as const
