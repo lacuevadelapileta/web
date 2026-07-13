@@ -10,7 +10,7 @@ export const contacto = {
   distanciaRonda: "A 15 km de Ronda",
   instagram: "https://www.instagram.com/cuevadelapileta/",
   googleMapsEmbed:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1d102377.68439319928!2d-5.352283923237764!3d36.6912648721628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0d3ae18cf9c10f%3A0x9c73250638e999b2!2sCueva%20de%20la%20Pileta!5e0!3m2!1ses!2ses!4v1706215107245!5m2!1ses!2ses",
+    "https://maps.google.com/maps?q=36.6912648721628,-5.352283923237764&z=15&output=embed",
 }
 
 export type Turno = {
