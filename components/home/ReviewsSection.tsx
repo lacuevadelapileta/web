@@ -158,21 +158,24 @@ export function ReviewsSection() {
                     </div>
                     <span
                       className={cn(
-                        "shrink-0 inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-wider",
+                        "shrink-0 inline-flex items-center justify-center rounded-full border",
+                        b.icono
+                          ? "size-7 p-1.5"
+                          : "gap-1.5 px-2.5 py-1 text-[0.65rem] font-semibold uppercase tracking-wider",
                         b.color
                       )}
                     >
-                      {b.icono && (
+                      {b.icono ? (
                         <Image
                           src={b.icono}
-                          alt=""
-                          aria-hidden
-                          width={12}
-                          height={12}
-                          className="size-3 object-contain"
+                          alt={b.label}
+                          width={16}
+                          height={16}
+                          className="size-full object-contain"
                         />
+                      ) : (
+                        b.label
                       )}
-                      {b.label}
                     </span>
                   </header>
 
