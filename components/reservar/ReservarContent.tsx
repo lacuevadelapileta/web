@@ -1,41 +1,9 @@
-"use client"
-
-import { useEffect, useMemo, useState } from "react"
-import { useSearchParams } from "next/navigation"
 import Link from "next/link"
-import {
-  ArrowLeft,
-  Phone,
-  Clock,
-  Check,
-} from "lucide-react"
+import { ArrowLeft, Phone, Clock, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { FechaTurnoPicker } from "@/components/reservar/FechaTurnoPicker"
 import { contacto, tarifas, horarios } from "@/content/cueva"
-import { formatFechaLarga, turnosDeFecha } from "@/lib/fechas"
 
 export function ReservarContent() {
-  const params = useSearchParams()
-
-  const [fecha, setFecha] = useState<Date | undefined>(undefined)
-  const [turnoId, setTurnoId] = useState<string | null>(null)
-
-  // Precarga fecha/turno si se llega desde el widget de la home
-  useEffect(() => {
-    const f = params.get("fecha")
-    const t = params.get("turno")
-    if (f && /^\d{4}-\d{2}-\d{2}$/.test(f)) {
-      setFecha(new Date(`${f}T12:00:00`))
-    }
-    if (t) setTurnoId(t)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  const turno = useMemo(
-    () => turnosDeFecha(fecha).find((t) => t.id === turnoId) ?? null,
-    [fecha, turnoId]
-  )
-
   return (
     <div className="bg-brand-off min-h-[calc(100vh-72px)]">
       <div className="container-pileta py-8 md:py-14">
@@ -52,50 +20,34 @@ export function ReservarContent() {
         </h1>
         <p className="mt-3 max-w-2xl text-brand-text-muted">
           Las reservas se gestionan de forma personal, por teléfono — no hay
-          pago online. Elige la fecha y el turno que prefieras y te
-          confirmamos plaza al momento.
+          pago online. Llama y dinos qué fecha y turno prefieres, te
+          confirmamos la plaza al momento.
         </p>
 
         <div className="mt-8 grid lg:grid-cols-[1fr_360px] gap-8 items-start">
-          {/* Selector fecha/turno */}
-          <div className="bg-white rounded-2xl border border-brand-blue/15 shadow-brand-sm p-6 md:p-8">
-            <FechaTurnoPicker
-              fecha={fecha}
-              turnoId={turnoId}
-              onFechaChange={(d) => {
-                setFecha(d)
-                setTurnoId(null)
-              }}
-              onTurnoChange={setTurnoId}
-            />
-
-            <div className="mt-8 border-t border-brand-blue/10 pt-6">
-              <p className="text-sm text-brand-text-muted">
-                {fecha && turno ? (
-                  <>
-                    Turno elegido:{" "}
-                    <strong className="text-brand-text">
-                      {formatFechaLarga(fecha)}, {turno.inicio}–{turno.fin} (
-                      {turno.turno})
-                    </strong>
-                  </>
-                ) : (
-                  "Elige fecha y turno, o contáctanos directamente si prefieres que te asesoremos."
-                )}
-              </p>
-
-              <div className="mt-5">
-                <a href={`tel:${contacto.telefonoTel}`}>
-                  <Button className="w-full h-12 bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold rounded-lg shadow-brand-sm">
-                    <Phone className="size-4 mr-2" />
-                    Llamar ahora
-                  </Button>
-                </a>
-              </div>
-              <p className="mt-3 text-xs text-brand-text-muted">
-                Atención telefónica: {contacto.horarioAtencion}
-              </p>
+          {/* Llamada */}
+          <div className="bg-white rounded-2xl border border-brand-blue/15 shadow-brand-sm p-6 md:p-10 text-center">
+            <div className="inline-flex items-center gap-2 text-brand-blue">
+              <Phone className="size-4" />
+              <span className="text-[0.78rem] font-semibold tracking-[0.14em] uppercase">
+                Reserva por teléfono
+              </span>
             </div>
+            <a
+              href={`tel:${contacto.telefonoTel}`}
+              className="block mt-4 font-display text-4xl md:text-5xl text-brand-text hover:text-brand-blue transition-colors"
+            >
+              {contacto.telefono}
+            </a>
+            <p className="mt-3 text-sm text-brand-text-muted">
+              Atención: {contacto.horarioAtencion}
+            </p>
+            <a href={`tel:${contacto.telefonoTel}`} className="inline-block mt-6">
+              <Button className="h-12 px-8 bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold rounded-lg shadow-brand-sm">
+                <Phone className="size-4 mr-2" />
+                Llamar ahora
+              </Button>
+            </a>
           </div>
 
           {/* Info lateral: tarifas + horarios */}
