@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
@@ -52,9 +53,21 @@ export function Navbar() {
         <div className="flex items-center gap-3 md:gap-4">
           <Link
             href="/"
-            className="flex items-baseline gap-1.5 leading-none"
+            className="flex items-center gap-2.5"
             aria-label="Cueva de la Pileta — Inicio"
           >
+            <Image
+              src={
+                transparent
+                  ? "/img/logo/yegua-logo-white.png"
+                  : "/img/logo/yegua-logo.png"
+              }
+              alt=""
+              width={32}
+              height={32}
+              className="size-7 md:size-8 w-auto object-contain transition-opacity duration-500"
+            />
+            <span className="flex items-baseline gap-1.5 leading-none">
             <span
               className={cn(
                 "text-xs md:text-sm font-semibold tracking-[0.18em] uppercase transition-colors duration-500",
@@ -72,6 +85,7 @@ export function Navbar() {
               )}
             >
               Pileta
+            </span>
             </span>
           </Link>
           <OpenBadge className="hidden sm:inline-flex" />
@@ -143,12 +157,21 @@ export function Navbar() {
             <SheetContent side="right" className="w-[320px] sm:w-[380px]">
               <SheetHeader>
                 <SheetTitle className="text-left">
-                  <span className="flex items-baseline gap-1.5">
-                    <span className="text-xs font-semibold tracking-[0.18em] uppercase text-brand-text">
-                      Cueva de la
-                    </span>
-                    <span className="font-display text-2xl italic text-brand-blue">
-                      Pileta
+                  <span className="flex items-center gap-2">
+                    <Image
+                      src="/img/logo/yegua-logo.png"
+                      alt=""
+                      width={28}
+                      height={28}
+                      className="size-7 w-auto object-contain"
+                    />
+                    <span className="flex items-baseline gap-1.5">
+                      <span className="text-xs font-semibold tracking-[0.18em] uppercase text-brand-text">
+                        Cueva de la
+                      </span>
+                      <span className="font-display text-2xl italic text-brand-blue">
+                        Pileta
+                      </span>
                     </span>
                   </span>
                 </SheetTitle>
