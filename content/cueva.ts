@@ -234,7 +234,7 @@ export const reviewsStats = {
   destacadas: 4,
   porPlataforma: [
     { nombre: "Google", logo: "G", icono: "/img/plataformas/google-icon.svg", rating: 4.8, total: 1842, color: "blue" },
-    { nombre: "TripAdvisor", logo: "T", icono: null, rating: 4.9, total: 503, color: "green" },
+    { nombre: "TripAdvisor", logo: "T", icono: "/img/plataformas/tripadvisor-icon.svg", rating: 4.9, total: 503, color: "green" },
     { nombre: "Booking", logo: "B", icono: null, rating: 4.7, total: 202, color: "navy" },
   ],
 } as const

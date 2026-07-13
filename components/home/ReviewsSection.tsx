@@ -49,7 +49,7 @@ function badgePlataforma(p: Review["plataforma"]) {
       return {
         label: "TripAdvisor",
         color: "bg-emerald-50 text-emerald-700 border-emerald-200",
-        icono: null,
+        icono: "/img/plataformas/tripadvisor-icon.svg",
       }
     case "Booking":
       return {
