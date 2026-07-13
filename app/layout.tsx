@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Cueva de la Pileta — Arte Rupestre Paleolítico · Benaoján, Málaga",
   description:
-    "Visita guiada a la cueva con pinturas rupestres de 40.000 años. Monumento Nacional. Reserva por teléfono. Solo 20 plazas por turno. A 15 km de Ronda.",
+    "Visita guiada a la cueva con pinturas rupestres de 40.000 años. Monumento Nacional. Reserva por teléfono. Solo 20 plazas por turno. A 19 km de Ronda.",
   keywords: [
     "cueva pileta",
     "arte rupestre málaga",

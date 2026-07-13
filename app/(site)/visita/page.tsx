@@ -318,12 +318,12 @@ export default function VisitaPage() {
                 Cómo llegar
               </span>
               <h2 className="h-display mt-5 text-[clamp(1.8rem,3vw,2.4rem)]">
-                A 15 km de <em>Ronda</em>, en plena Serranía
+                A 19 km de <em>Ronda</em>, en plena Serranía
               </h2>
               <p className="mt-4 text-brand-text-muted leading-relaxed">
                 La cueva está en la Carretera de Cortes de la Frontera (MA-8401),
-                cerca del pueblo de Benaoján. Desde Ronda son unos 20 minutos en
-                coche; desde Málaga capital, una hora y media.
+                cerca del pueblo de Benaoján. Desde Ronda son unos 23 minutos en
+                coche; desde Málaga capital, cerca de dos horas.
               </p>
 
               <div className="mt-6 space-y-4">

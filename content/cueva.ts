@@ -8,7 +8,7 @@ export const contacto = {
   horarioAtencion: "Lunes a Domingo, 10:00 – 13:00 h",
   direccion:
     "Carretera de Cortes de la Frontera, Benaoján, 29370 Málaga",
-  distanciaRonda: "A 15 km de Ronda",
+  distanciaRonda: "A 19 km de Ronda (~23 min en coche)",
   instagram: "https://www.instagram.com/cuevadelapileta/",
   googleMapsEmbed:
     "https://maps.google.com/maps?q=36.6912648721628,-5.352283923237764&z=15&output=embed",
@@ -143,7 +143,7 @@ export const salas = [
 
 export const recomendaciones = [
   "Ropa cómoda y calzado cerrado con buena suela",
-  "Llevar una chaqueta ligera — temperatura interior constante de 16 °C",
+  "Llevar una chaqueta ligera — temperatura interior constante de 15 °C",
   "Desde el parking hasta la puerta de la cueva: 105 escalones, ~5 minutos subiendo",
   "La cita es en la puerta de la cueva, no en el parking — hay que subir la escalera antes de la hora del turno",
   "No apta para personas con problemas de movilidad o cardíacos severos",
@@ -287,7 +287,7 @@ export const faqs = [
   },
   {
     q: "¿Hace frío dentro?",
-    a: "La temperatura interior es constante de 16 °C todo el año. Recomendamos una chaqueta ligera incluso en verano.",
+    a: "La temperatura interior es constante de 15 °C todo el año. Recomendamos una chaqueta ligera incluso en verano.",
   },
   {
     q: "¿Hay parking?",
@@ -311,5 +311,5 @@ export const SITE = {
   nombre: "Cueva de la Pileta",
   baseUrl: "https://cuevadelapileta.com",
   descripcionCorta:
-    "Arte rupestre paleolítico de 40.000 años en Benaoján, Málaga. A 15 km de Ronda.",
+    "Arte rupestre paleolítico de 40.000 años en Benaoján, Málaga. A 19 km de Ronda.",
 } as const
