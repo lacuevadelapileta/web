@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Marquee } from "@/components/ui/Marquee"
 import { mediosMencionados } from "@/content/cueva"
 
@@ -9,12 +10,18 @@ export function MediosMarquee() {
       </p>
       <Marquee speed={45}>
         {mediosMencionados.map((m) => (
-          <span
-            key={m}
-            className="font-display text-xl md:text-2xl text-brand-text-muted/80 whitespace-nowrap"
+          <div
+            key={m.nombre}
+            className="flex items-center whitespace-nowrap grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all duration-300"
           >
-            {m}
-          </span>
+            <Image
+              src={m.logo}
+              alt={m.nombre}
+              width={140}
+              height={32}
+              className="h-7 md:h-8 w-auto object-contain"
+            />
+          </div>
         ))}
       </Marquee>
     </section>

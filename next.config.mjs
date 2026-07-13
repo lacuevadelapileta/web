@@ -7,6 +7,11 @@ const nextConfig = {
       { protocol: "https", hostname: "images.pexels.com" },
       { protocol: "https", hostname: "upload.wikimedia.org" },
     ],
+    // Logos de medios en /public/img/medios son SVG propios (no subidos por
+    // usuarios) — se habilita con la mitigación de seguridad recomendada.
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   async headers() {
     return [

@@ -240,14 +240,14 @@ export const reviewsStats = {
 } as const
 
 export const mediosMencionados = [
-  "National Geographic",
-  "El País",
-  "Lonely Planet",
-  "BBC Travel",
-  "Condé Nast Traveler",
-  "ABC Cultural",
-  "The Guardian",
-  "Diario Sur",
+  { nombre: "National Geographic", logo: "/img/medios/national-geographic.svg" },
+  { nombre: "El País", logo: "/img/medios/el-pais.svg" },
+  { nombre: "Lonely Planet", logo: "/img/medios/lonely-planet.svg" },
+  { nombre: "BBC Travel", logo: "/img/medios/bbc-travel.svg" },
+  { nombre: "Condé Nast Traveler", logo: "/img/medios/conde-nast-traveler.svg" },
+  { nombre: "ABC Cultural", logo: "/img/medios/abc-cultural.svg" },
+  { nombre: "The Guardian", logo: "/img/medios/the-guardian.svg" },
+  { nombre: "Diario Sur", logo: "/img/medios/diario-sur.svg" },
 ] as const
 
 export const faqs = [
