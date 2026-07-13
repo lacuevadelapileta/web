@@ -2,26 +2,132 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* ─── BRAND TOKENS — Cueva de la Pileta ──────────────────────────── */
+    --white: #ffffff;
+    --off-white: #f4f8fd;
+    --light-blue: #e8f2fc;
+
+    --blue: #2a7fbc;
+    --blue-dark: #1a5f96;
+    --blue-light: #ebf4fb;
+
+    --green: #2e9e6b;
+    --green-light: #e8f7f1;
+
+    --sun: #f59e0b;
+    --sun-light: #fef3c7;
+
+    --text: #1a2332;
+    --text-muted: #4a6080;
+    --text-light: #7a93b0;
+
+    --border: rgba(42, 127, 188, 0.15);
+    --border-2: rgba(42, 127, 188, 0.30);
+
+    --shadow-sm: 0 2px 8px rgba(26, 95, 150, 0.08);
+    --shadow-md: 0 4px 20px rgba(26, 95, 150, 0.12);
+
+    /* ─── shadcn tokens (HSL) ────────────────────────────────────────── */
+    --background-hsl: 0 0% 100%;
+    --foreground-hsl: 217 31% 15%;
+    --card-hsl: 0 0% 100%;
+    --card-foreground-hsl: 217 31% 15%;
+    --popover-hsl: 0 0% 100%;
+    --popover-foreground-hsl: 217 31% 15%;
+    --primary-hsl: 205 63% 45%;
+    --primary-foreground-hsl: 0 0% 100%;
+    --secondary-hsl: 210 50% 95%;
+    --secondary-foreground-hsl: 217 31% 15%;
+    --muted-hsl: 210 40% 96%;
+    --muted-foreground-hsl: 215 25% 40%;
+    --accent-hsl: 210 50% 95%;
+    --accent-foreground-hsl: 217 31% 15%;
+    --destructive-hsl: 0 75% 55%;
+    --destructive-foreground-hsl: 0 0% 100%;
+    --border-hsl: 210 40% 90%;
+    --input-hsl: 210 40% 90%;
+    --ring-hsl: 205 63% 45%;
+    --radius: 0.75rem;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background: var(--white);
+    color: var(--text);
+    font-family: var(--font-jakarta), system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  ::selection {
+    background: var(--blue-light);
+    color: var(--blue-dark);
+  }
+}
+
+@layer components {
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+  .eyebrow-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.9rem;
+    border-radius: 9999px;
+    background: var(--blue-light);
+    color: var(--blue);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+  .h-display {
+    font-family: var(--font-playfair), Georgia, serif;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+  .h-display em {
+    font-style: italic;
+    font-weight: 700;
+    color: var(--blue);
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .container-pileta {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-pileta {
+      padding-inline: 2rem;
+    }
   }
 }

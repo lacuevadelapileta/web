@@ -9,6 +9,9 @@
 # testing
 /coverage
 
+# QA screenshots (artefactos locales, no necesarios en el repo)
+/screenshots
+
 # next.js
 /.next/
 /out/
