@@ -12,11 +12,14 @@ import { SalasSection } from "@/components/home/SalasSection"
 import { timelineHistoria } from "@/content/cueva"
 import { imagenes } from "@/content/imagenes"
 import type { Metadata } from "next"
+import { breadcrumbSchema } from "@/lib/schema"
+import { JsonLd } from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Historia y Pinturas — Cueva de la Pileta",
   description:
     "120 años custodiada por la familia Bullón. Descubre la historia de la Cueva de la Pileta, sus pinturas rupestres de 40.000 años y las 9 salas que componen el recorrido.",
+  alternates: { canonical: "/la-cueva" },
 }
 
 const pinturasDestacadas = [
@@ -55,6 +58,7 @@ const pinturasDestacadas = [
 export default function LaCuevaPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "La Cueva", path: "/la-cueva" }])} />
       {/* Hero editorial */}
       <section className="relative bg-brand-white overflow-hidden">
         <div

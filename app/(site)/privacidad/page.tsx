@@ -4,6 +4,7 @@ import { contacto, empresa } from "@/content/cueva"
 export const metadata: Metadata = {
   title: "Política de Privacidad — Cueva de la Pileta",
   robots: { index: false, follow: true },
+  alternates: { canonical: "/privacidad" },
 }
 
 export default function PrivacidadPage() {
@@ -14,7 +15,7 @@ export default function PrivacidadPage() {
           Política de Privacidad
         </h1>
         <p className="mt-2 text-sm text-brand-text-muted">
-          Última actualización: {new Date().toLocaleDateString("es-ES", { year: "numeric", month: "long", day: "numeric" })}
+          Última actualización: 13 de julio de 2026
         </p>
 
         <div className="mt-8 space-y-8 text-brand-text-muted leading-relaxed [&_h2]:font-display [&_h2]:text-xl [&_h2]:text-brand-text [&_h2]:mb-2 [&_p]:mb-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-3 [&_li]:mb-1">

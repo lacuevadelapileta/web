@@ -10,8 +10,10 @@ export const contacto = {
     "Carretera de Cortes de la Frontera, Benaoján, 29370 Málaga",
   distanciaRonda: "A 19 km de Ronda (~23 min en coche)",
   instagram: "https://www.instagram.com/cuevadelapileta/",
+  // Usa el cid verificado de la ficha de Google Business Profile (no
+  // coordenadas genéricas) para que el embed muestre nombre/fotos reales.
   googleMapsEmbed:
-    "https://maps.google.com/maps?q=36.6912648721628,-5.352283923237764&z=15&output=embed",
+    "https://www.google.com/maps?cid=11273395000893348274&output=embed",
 }
 
 export const empresa = {

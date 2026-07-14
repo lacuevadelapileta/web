@@ -5,17 +5,21 @@ import { Button } from "@/components/ui/button"
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll"
 import { imagenes } from "@/content/imagenes"
 import type { Metadata } from "next"
+import { breadcrumbSchema } from "@/lib/schema"
+import { JsonLd } from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Galería — Cueva de la Pileta",
   description:
     "Imágenes del interior de la Cueva de la Pileta, su entrada, el entorno de la Sierra de Líbar y el paisaje de la Serranía de Ronda.",
+  alternates: { canonical: "/galeria" },
 }
 
 export default function GaleriaPage() {
   const tiles = imagenes.galeria
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Galería", path: "/galeria" }])} />
       {/* Hero */}
       <section className="bg-brand-white">
         <div className="container-pileta pt-12 md:pt-16 pb-10">

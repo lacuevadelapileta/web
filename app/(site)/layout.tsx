@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar"
 import { NavSpacer } from "@/components/layout/NavSpacer"
 import { Footer } from "@/components/layout/Footer"
-import { ChatWidget } from "@/components/chat/ChatWidget"
+import { ChatWidgetLazy } from "@/components/chat/ChatWidgetLazy"
 import { CookieBanner } from "@/components/cookies/CookieBanner"
 
 export default function SiteLayout({
@@ -15,7 +15,7 @@ export default function SiteLayout({
       <NavSpacer />
       <main className="flex-1">{children}</main>
       <Footer />
-      <ChatWidget />
+      <ChatWidgetLazy />
       <CookieBanner />
     </div>
   )

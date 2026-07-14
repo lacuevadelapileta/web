@@ -7,6 +7,8 @@ const nextConfig = {
       { protocol: "https", hostname: "images.pexels.com" },
       { protocol: "https", hostname: "upload.wikimedia.org" },
     ],
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 2678400, // 31 días — las imágenes no cambian con frecuencia
     // Logos de medios en /public/img/medios son SVG propios (no subidos por
     // usuarios) — se habilita con la mitigación de seguridad recomendada.
     dangerouslyAllowSVG: true,
@@ -28,6 +30,11 @@ const nextConfig = {
           {
             key: "Strict-Transport-Security",
             value: "max-age=63072000; includeSubDomains; preload",
+          },
+          {
+            key: "Content-Security-Policy",
+            value:
+              "default-src 'self'; img-src 'self' data: https://images.unsplash.com https://plus.unsplash.com https://images.pexels.com https://upload.wikimedia.org https://maps.google.com https://www.google.com; frame-src https://maps.google.com https://www.google.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:;",
           },
         ],
       },

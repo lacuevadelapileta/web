@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google"
 import { SITE } from "@/content/cueva"
+import { organizationSchema } from "@/lib/schema"
+import { JsonLd } from "@/components/seo/JsonLd"
 import "./globals.css"
 
 const jakarta = Plus_Jakarta_Sans({
@@ -19,6 +21,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.baseUrl),
   title: "Cueva de la Pileta — Arte Rupestre Paleolítico · Benaoján, Málaga",
   description:
     "Visita guiada a la cueva con pinturas rupestres de 40.000 años. Monumento Nacional. Reserva por teléfono. Solo 20 plazas por turno. A 19 km de Ronda.",
@@ -48,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${jakarta.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased bg-brand-white text-brand-text">
+        <JsonLd data={organizationSchema()} />
         {children}
       </body>
     </html>

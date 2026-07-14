@@ -4,6 +4,7 @@ import { contacto, empresa, SITE } from "@/content/cueva"
 export const metadata: Metadata = {
   title: "Aviso Legal — Cueva de la Pileta",
   robots: { index: false, follow: true },
+  alternates: { canonical: "/aviso-legal" },
 }
 
 export default function AvisoLegalPage() {
@@ -14,7 +15,7 @@ export default function AvisoLegalPage() {
           Aviso Legal
         </h1>
         <p className="mt-2 text-sm text-brand-text-muted">
-          Última actualización: {new Date().toLocaleDateString("es-ES", { year: "numeric", month: "long", day: "numeric" })}
+          Última actualización: 13 de julio de 2026
         </p>
 
         <div className="mt-8 space-y-8 text-brand-text-muted leading-relaxed [&_h2]:font-display [&_h2]:text-xl [&_h2]:text-brand-text [&_h2]:mb-2 [&_p]:mb-3">
@@ -32,13 +33,18 @@ export default function AvisoLegalPage() {
               <br />
               <strong>NIF:</strong> {empresa.nif}
               <br />
-              <strong>Domicilio:</strong> {empresa.domicilioFiscal}
+              <strong>Domicilio fiscal:</strong> {empresa.domicilioFiscal}
               <br />
               <strong>Correo electrónico:</strong> {contacto.email}
               <br />
               <strong>Teléfono:</strong> {contacto.telefono}
               <br />
               <strong>Sitio web:</strong> {SITE.baseUrl}
+            </p>
+            <p className="text-sm">
+              El domicilio fiscal indicado corresponde a la titularidad legal
+              del negocio y no es el punto de encuentro para la visita. La
+              cueva se visita en {contacto.direccion}.
             </p>
           </section>
 

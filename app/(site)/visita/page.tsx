@@ -33,16 +33,20 @@ import {
 } from "@/content/cueva"
 import { imagenes } from "@/content/imagenes"
 import type { Metadata } from "next"
+import { breadcrumbSchema, GOOGLE_MAPS_URL } from "@/lib/schema"
+import { JsonLd } from "@/components/seo/JsonLd"
 
 export const metadata: Metadata = {
   title: "Visita la Cueva de la Pileta — Horarios, Tarifas y Cómo Llegar",
   description:
     "Toda la información práctica para visitar la Cueva de la Pileta: horarios, precios, ubicación, reservas y recomendaciones para la visita.",
+  alternates: { canonical: "/visita" },
 }
 
 export default function VisitaPage() {
   return (
     <>
+      <JsonLd data={breadcrumbSchema([{ name: "Visita", path: "/visita" }])} />
       {/* Hero */}
       <section className="relative bg-brand-white overflow-hidden">
         <div
@@ -142,7 +146,11 @@ export default function VisitaPage() {
               </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="finde" className="mt-5">
+            <TabsContent
+              value="finde"
+              forceMount
+              className="mt-5 data-[state=inactive]:hidden"
+            >
               <div className="rounded-2xl bg-white border border-brand-blue/15 shadow-brand-sm overflow-hidden">
                 {horarios.findeSemanaFestivo.map((t, i, arr) => (
                   <div
@@ -174,7 +182,11 @@ export default function VisitaPage() {
               </div>
             </TabsContent>
 
-            <TabsContent value="laboral" className="mt-5">
+            <TabsContent
+              value="laboral"
+              forceMount
+              className="mt-5 data-[state=inactive]:hidden"
+            >
               <div className="rounded-2xl bg-white border border-brand-blue/15 shadow-brand-sm overflow-hidden">
                 {horarios.laboral.map((t, i, arr) => (
                   <div
@@ -368,7 +380,7 @@ export default function VisitaPage() {
               </div>
 
               <a
-                href="https://maps.google.com/?q=Cueva+de+la+Pileta+Benaoján"
+                href={GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >

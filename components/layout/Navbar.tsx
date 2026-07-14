@@ -50,7 +50,7 @@ export function Navbar() {
     >
       <nav className="container-pileta flex h-16 md:h-[72px] items-center justify-between">
         {/* Logo + OpenBadge */}
-        <div className="flex items-center gap-3 md:gap-4">
+        <div className="flex items-center gap-3 md:gap-4 shrink-0">
           <Link
             href="/"
             className="flex items-center gap-2.5"
@@ -126,7 +126,7 @@ export function Navbar() {
         </div>
 
         {/* Mobile menu */}
-        <div className="md:hidden flex items-center gap-2">
+        <div className="md:hidden flex items-center gap-2 shrink-0">
           <Link href="/reservar">
             <Button
               size="sm"
