@@ -405,7 +405,7 @@ export default function VisitaPage() {
               <div className="mt-4 relative rounded-2xl overflow-hidden aspect-[16/9] shadow-brand-sm">
                 <Image
                   src={imagenes.llegada}
-                  alt="Acceso a pie a la Cueva de la Pileta — sendero de montaña"
+                  alt="Verja de entrada a la Cueva de la Pileta"
                   fill
                   sizes="(max-width: 1024px) 100vw, 600px"
                   className="object-cover"
