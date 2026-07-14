@@ -21,7 +21,7 @@ export function AboutSection() {
                 src={imagenes.about}
                 alt="Interior de la Cueva de la Pileta — luz cálida sobre formaciones milenarias"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 600px"
                 className="object-cover"
               />
             </div>

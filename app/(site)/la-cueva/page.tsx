@@ -89,7 +89,7 @@ export default function LaCuevaPage() {
                   src={imagenes.exterior}
                   alt="Entrada a la Cueva de la Pileta"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 100vw, 600px"
                   className="object-cover"
                   priority
                 />

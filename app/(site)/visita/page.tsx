@@ -407,7 +407,7 @@ export default function VisitaPage() {
                   src={imagenes.llegada}
                   alt="Acceso a pie a la Cueva de la Pileta — sendero de montaña"
                   fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 100vw, 600px"
                   className="object-cover"
                 />
               </div>
