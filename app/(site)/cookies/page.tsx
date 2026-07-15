@@ -53,9 +53,11 @@ export default function CookiesPage() {
               </tbody>
             </table>
             <p className="mt-3">
-              No utilizamos cookies de analítica, publicidad ni de terceros.
-              Si esto cambia en el futuro, actualizaremos esta página antes
-              de activarlas.
+              No utilizamos cookies de publicidad ni de terceros. Para medir
+              las visitas usamos Vercel Analytics, un servicio de analítica
+              que no utiliza cookies ni almacena datos que identifiquen a
+              cada visitante individualmente — solo estadísticas agregadas
+              y anónimas (páginas vistas, país, tipo de dispositivo).
             </p>
           </section>
 

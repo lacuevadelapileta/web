@@ -148,7 +148,7 @@ export const salas = [
     n: "09",
     nombre: "Sala del Pez",
     desc: "Una de las salas más grandes de la cueva, con pintura neolítica y de la Edad del Metal (entre 3.000 y 9.000 años). Al fondo, el gran Pez de 1,20 m, datado en unos 20.000 años y de características marinas, con una foca pintada en su interior — una de las representaciones más singulares del arte rupestre europeo. También hay figuras de lince y cabras, del Paleolítico (entre 10.000 y 40.000 años).",
-    foto: "/img/pileta-pintura-pez.webp",
+    foto: "/img/pileta-sala-pez.webp",
   },
 ] as const
 

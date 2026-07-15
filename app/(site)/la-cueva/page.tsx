@@ -159,14 +159,14 @@ export default function LaCuevaPage() {
       {/* Legado familiar */}
       <section className="bg-brand-white">
         <div className="container-pileta py-16 md:py-20">
-          <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-10 md:gap-14 items-center">
+          <div className="grid md:grid-cols-[1.1fr_1fr] gap-10 md:gap-14 items-center">
             <RevealOnScroll>
-              <div className="relative aspect-[3/4] max-w-sm mx-auto rounded-2xl overflow-hidden shadow-brand-md">
+              <div className="relative aspect-[16/10] max-w-lg mx-auto rounded-2xl overflow-hidden shadow-brand-md">
                 <Image
                   src={imagenes.historiaFamilia}
                   alt="José Bullón Lobato, descubridor de la cueva, junto a su hijo Tomás Bullón García"
                   fill
-                  sizes="(max-width: 768px) 100vw, 400px"
+                  sizes="(max-width: 768px) 100vw, 500px"
                   className="object-cover"
                 />
               </div>

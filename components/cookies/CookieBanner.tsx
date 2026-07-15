@@ -37,8 +37,9 @@ export function CookieBanner() {
         <Cookie className="hidden sm:block size-8 text-brand-blue shrink-0" />
         <p className="text-sm text-brand-text-muted flex-1">
           Usamos cookies técnicas necesarias para el funcionamiento de la
-          web. No usamos cookies de analítica ni publicidad. Puedes
-          consultar más en nuestra{" "}
+          web y una analítica sin cookies (Vercel Analytics) para saber
+          cuánta gente visita el sitio. No usamos cookies de publicidad.
+          Puedes consultar más en nuestra{" "}
           <Link href="/cookies" className="text-brand-blue hover:underline font-medium">
             política de cookies
           </Link>

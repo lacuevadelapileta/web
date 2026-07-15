@@ -5,8 +5,8 @@
 
 export const imagenes = {
   // ── HERO ───────────────────────────────────────────────────────────────
-  hero: "/img/pileta-cortina-estalactitas.webp",
-  heroFondo: "/img/pileta-cortina-estalactitas.webp",
+  hero: "/img/pileta-interior.jpg",
+  heroFondo: "/img/pileta-interior.jpg",
 
   // ── ABOUT / HISTORIA ───────────────────────────────────────────────────
   about: "/img/pileta-formacion-columna.webp",

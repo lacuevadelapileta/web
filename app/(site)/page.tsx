@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/home/HeroSection"
 import { StatsBar } from "@/components/home/StatsBar"
 import { AboutSection } from "@/components/home/AboutSection"
 import { MediosMarquee } from "@/components/home/MediosMarquee"
-import { VisitaSection } from "@/components/home/VisitaSection"
+import { HistoriaFamiliarSection } from "@/components/home/HistoriaFamiliarSection"
 import { EntradasSection } from "@/components/home/EntradasSection"
 import { SalasSection } from "@/components/home/SalasSection"
 import { GaleriaPreview } from "@/components/home/GaleriaPreview"
@@ -16,7 +16,7 @@ export default function HomePage() {
       <StatsBar />
       <MediosMarquee />
       <AboutSection />
-      <VisitaSection />
+      <HistoriaFamiliarSection />
       <EntradasSection />
       <SalasSection />
       <GaleriaPreview />
