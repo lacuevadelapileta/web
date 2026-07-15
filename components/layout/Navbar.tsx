@@ -48,12 +48,12 @@ export function Navbar() {
           : "bg-white/85 backdrop-blur-xl shadow-[0_2px_20px_rgba(26,95,150,0.08)] border-b border-brand-blue/10"
       )}
     >
-      <nav className="container-pileta flex h-16 md:h-[72px] items-center justify-between">
+      <nav className="container-pileta flex h-16 md:h-[72px] items-center justify-between gap-2">
         {/* Logo + OpenBadge */}
-        <div className="flex items-center gap-3 md:gap-4 shrink-0">
+        <div className="flex items-center gap-2 md:gap-4 shrink-0">
           <Link
             href="/"
-            className="flex items-center gap-2.5"
+            className="flex items-center gap-1.5 md:gap-2.5"
             aria-label="Cueva de la Pileta — Inicio"
           >
             <Image
@@ -65,12 +65,12 @@ export function Navbar() {
               alt=""
               width={48}
               height={48}
-              className="size-10 md:size-12 w-auto object-contain transition-opacity duration-500"
+              className="size-7 md:size-12 w-auto shrink-0 object-contain transition-opacity duration-500"
             />
-            <span className="flex items-baseline gap-1.5 leading-none">
+            <span className="flex items-baseline gap-1 md:gap-1.5 leading-none min-w-0">
             <span
               className={cn(
-                "hidden sm:inline text-xs md:text-sm font-semibold tracking-[0.18em] uppercase transition-colors duration-500",
+                "text-[0.55rem] md:text-sm font-semibold tracking-[0.1em] md:tracking-[0.18em] uppercase whitespace-nowrap transition-colors duration-500",
                 transparent ? "text-white drop-shadow-md" : "text-brand-text"
               )}
             >
@@ -78,7 +78,7 @@ export function Navbar() {
             </span>
             <span
               className={cn(
-                "font-display text-2xl md:text-3xl italic transition-colors duration-500",
+                "font-display text-lg md:text-3xl italic whitespace-nowrap transition-colors duration-500",
                 transparent
                   ? "text-brand-sun drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
                   : "text-brand-blue"
@@ -126,12 +126,12 @@ export function Navbar() {
         </div>
 
         {/* Mobile menu */}
-        <div className="md:hidden flex items-center gap-2 shrink-0">
+        <div className="md:hidden flex items-center gap-1.5 shrink-0">
           <Link href="/reservar">
             <Button
               size="sm"
               className={cn(
-                "h-9 font-semibold rounded-lg transition-all duration-300",
+                "h-8 px-2.5 text-xs font-semibold rounded-lg transition-all duration-300",
                 transparent
                   ? "bg-white text-brand-blue hover:bg-brand-off"
                   : "bg-brand-blue text-white hover:bg-brand-blue-dark"
@@ -145,13 +145,13 @@ export function Navbar() {
               <button
                 aria-label="Abrir menú"
                 className={cn(
-                  "inline-flex h-10 w-10 items-center justify-center rounded-lg border transition-all duration-300",
+                  "inline-flex h-8 w-8 items-center justify-center rounded-lg border transition-all duration-300",
                   transparent
                     ? "border-white/40 bg-white/10 backdrop-blur text-white"
                     : "border-brand-blue/15 text-brand-text"
                 )}
               >
-                <Menu className="size-5" />
+                <Menu className="size-4" />
               </button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[320px] sm:w-[380px]">
