@@ -70,7 +70,7 @@ export function Navbar() {
             <span className="flex items-baseline gap-1.5 leading-none">
             <span
               className={cn(
-                "text-xs md:text-sm font-semibold tracking-[0.18em] uppercase transition-colors duration-500",
+                "hidden sm:inline text-xs md:text-sm font-semibold tracking-[0.18em] uppercase transition-colors duration-500",
                 transparent ? "text-white drop-shadow-md" : "text-brand-text"
               )}
             >
