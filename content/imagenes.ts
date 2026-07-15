@@ -19,6 +19,7 @@ export const imagenes = {
   // ── GALERÍA — tiles reales + entorno ────────────────────────────────────
   galeria: [
     { src: "/img/pileta-pintura-pez.webp", label: "Pintura rupestre — El Pez", aspect: "aspect-[16/9]" },
+    { src: "/img/pileta-pintura-signo.webp", label: "Signo rupestre abstracto", aspect: "aspect-[16/9]" },
     { src: "/img/pileta-verja-entrada.webp", label: "Entrada real a la cueva", aspect: "aspect-[3/4]" },
     { src: "/img/pileta-pasillo-estalactitas.webp", label: "Pasillo de estalactitas", aspect: "aspect-[4/3]" },
     { src: "/img/pileta-formacion-columna.webp", label: "Formaciones calcáreas", aspect: "aspect-square" },
