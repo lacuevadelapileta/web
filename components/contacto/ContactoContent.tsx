@@ -21,6 +21,7 @@ import { contacto } from "@/content/cueva"
 export function ContactoContent() {
   const [enviado, setEnviado] = useState(false)
   const [enviando, setEnviando] = useState(false)
+  const [error, setError] = useState(false)
   const [nombre, setNombre] = useState("")
   const [email, setEmail] = useState("")
   const [mensaje, setMensaje] = useState("")
@@ -36,9 +37,20 @@ export function ContactoContent() {
     e.preventDefault()
     if (!valido) return
     setEnviando(true)
-    await new Promise((r) => setTimeout(r, 900))
-    setEnviando(false)
-    setEnviado(true)
+    setError(false)
+    try {
+      const res = await fetch("/api/contacto", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre, email, mensaje }),
+      })
+      if (!res.ok) throw new Error("send_failed")
+      setEnviado(true)
+    } catch {
+      setError(true)
+    } finally {
+      setEnviando(false)
+    }
   }
 
   return (
@@ -207,6 +219,17 @@ export function ContactoContent() {
                         consulta.
                       </span>
                     </label>
+
+                    {error && (
+                      <p className="text-sm text-red-600">
+                        No se pudo enviar el mensaje. Prueba de nuevo o
+                        escríbenos directamente a{" "}
+                        <a href={`mailto:${contacto.email}`} className="underline">
+                          {contacto.email}
+                        </a>{" "}
+                        o por teléfono.
+                      </p>
+                    )}
 
                     <Button
                       type="submit"
