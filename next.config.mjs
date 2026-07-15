@@ -1,3 +1,5 @@
+const isDev = process.env.NODE_ENV === "development"
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -33,8 +35,9 @@ const nextConfig = {
           },
           {
             key: "Content-Security-Policy",
-            value:
-              "default-src 'self'; img-src 'self' data: https://images.unsplash.com https://plus.unsplash.com https://images.pexels.com https://upload.wikimedia.org https://maps.google.com https://www.google.com; frame-src https://maps.google.com https://www.google.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self'; font-src 'self' data:;",
+            // 'unsafe-eval' solo en dev: Next.js lo necesita para Fast Refresh/HMR.
+            // La build de producción (Vercel) no lo usa ni lo necesita.
+            value: `default-src 'self'; img-src 'self' data: https://images.unsplash.com https://plus.unsplash.com https://images.pexels.com https://upload.wikimedia.org https://maps.google.com https://www.google.com; frame-src https://maps.google.com https://www.google.com; script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}; style-src 'self' 'unsafe-inline'; connect-src 'self'${isDev ? " ws:" : ""}; font-src 'self' data:;`,
           },
         ],
       },

@@ -65,12 +65,12 @@ export function Navbar() {
               alt=""
               width={48}
               height={48}
-              className="size-7 md:size-12 w-auto shrink-0 object-contain transition-opacity duration-500"
+              className="size-8 md:size-12 w-auto shrink-0 object-contain transition-opacity duration-500"
             />
             <span className="flex items-baseline gap-1 md:gap-1.5 leading-none min-w-0">
             <span
               className={cn(
-                "text-[0.55rem] md:text-sm font-semibold tracking-[0.1em] md:tracking-[0.18em] uppercase whitespace-nowrap transition-colors duration-500",
+                "text-[0.6rem] md:text-sm font-semibold tracking-[0.1em] md:tracking-[0.18em] uppercase whitespace-nowrap transition-colors duration-500",
                 transparent ? "text-white drop-shadow-md" : "text-brand-text"
               )}
             >
@@ -78,7 +78,7 @@ export function Navbar() {
             </span>
             <span
               className={cn(
-                "font-display text-lg md:text-3xl italic whitespace-nowrap transition-colors duration-500",
+                "font-display text-xl md:text-3xl italic whitespace-nowrap transition-colors duration-500",
                 transparent
                   ? "text-brand-sun drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
                   : "text-brand-blue"
@@ -140,7 +140,7 @@ export function Navbar() {
               Reservar
             </Button>
           </Link>
-          <Sheet open={open} onOpenChange={setOpen}>
+          <Sheet open={open} onOpenChange={setOpen} modal={false}>
             <SheetTrigger asChild>
               <button
                 aria-label="Abrir menú"
