@@ -7,7 +7,7 @@ import { imagenes } from "@/content/imagenes"
 const badges = [
   "Monumento Nacional · 1924",
   "Bien de Interés Cultural · 1985",
-  "Familia Bullón · 4 generaciones",
+  "Familia Bullón · 5 generaciones",
 ]
 
 export function AboutSection() {
@@ -64,10 +64,10 @@ export function AboutSection() {
 
             <RevealOnScroll delay={0.3}>
               <p className="mt-6 text-base text-brand-text-muted leading-relaxed">
-                Cuatro generaciones de la familia Bullón han custodiado y guiado
+                Cinco generaciones de la familia Bullón han custodiado y guiado
                 la cueva desde entonces. Hoy son Rosario y José Tomás Bullón
                 Almagro quienes reciben a cada visitante con la misma pasión que
-                su bisabuelo.
+                su tatarabuelo.
               </p>
             </RevealOnScroll>
 

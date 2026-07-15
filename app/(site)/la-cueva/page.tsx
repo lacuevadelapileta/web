@@ -78,7 +78,7 @@ export default function LaCuevaPage() {
               <p className="mt-5 text-lg text-brand-text-muted leading-relaxed max-w-prose">
                 Una grieta encontrada por casualidad buscando guano de
                 murciélago en 1905. Hoy, uno de los conjuntos de arte rupestre
-                paleolítico más importantes de Europa, custodiado por cuatro
+                paleolítico más importantes de Europa, custodiado por cinco
                 generaciones de la misma familia.
               </p>
             </RevealOnScroll>
@@ -152,6 +152,38 @@ export default function LaCuevaPage() {
                 )
               })}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Legado familiar */}
+      <section className="bg-brand-white">
+        <div className="container-pileta py-16 md:py-20">
+          <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-10 md:gap-14 items-center">
+            <RevealOnScroll>
+              <div className="relative aspect-[3/4] max-w-sm mx-auto rounded-2xl overflow-hidden shadow-brand-md">
+                <Image
+                  src={imagenes.historiaFamilia}
+                  alt="José Bullón Lobato, descubridor de la cueva, junto a su hijo Tomás Bullón García"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover"
+                />
+              </div>
+            </RevealOnScroll>
+            <RevealOnScroll delay={0.1}>
+              <span className="eyebrow-pill">Legado familiar</span>
+              <h2 className="h-display mt-5 text-[clamp(1.8rem,3vw,2.6rem)]">
+                Cinco generaciones de la <em>familia Bullón</em>
+              </h2>
+              <p className="mt-4 text-brand-text-muted text-lg leading-relaxed max-w-prose">
+                En la fotografía, José Bullón Lobato — quien descubrió la
+                cueva en 1905 — junto a su hijo Tomás Bullón García, que en
+                1933 encontraría las Nuevas Galerías y los restos humanos del
+                interior. Hoy, la quinta generación sigue custodiando y
+                guiando la visita a la cueva.
+              </p>
+            </RevealOnScroll>
           </div>
         </div>
       </section>

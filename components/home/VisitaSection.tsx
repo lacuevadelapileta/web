@@ -37,7 +37,7 @@ const cards: Card[] = [
     icon: <Users className="size-6" />,
     title: "Guías Familia Bullón",
     desc:
-      "Cuarta generación de descendientes del descubridor. Conocen cada rincón porque crecieron entre estas paredes. Visitas en ES y EN.",
+      "Quinta generación de descendientes del descubridor. Conocen cada rincón porque crecieron entre estas paredes. Visitas en ES y EN.",
     meta: [
       { icon: <Sparkles className="size-3.5" />, text: "ES · EN" },
       { icon: <Users className="size-3.5" />, text: "Locales" },

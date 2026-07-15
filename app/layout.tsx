@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Plus_Jakarta_Sans, Playfair_Display } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
 import { SITE } from "@/content/cueva"
 import { organizationSchema } from "@/lib/schema"
 import { JsonLd } from "@/components/seo/JsonLd"
@@ -53,6 +54,7 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-brand-white text-brand-text">
         <JsonLd data={organizationSchema()} />
         {children}
+        <Analytics />
       </body>
     </html>
   )

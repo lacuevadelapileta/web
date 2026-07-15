@@ -100,46 +100,55 @@ export const salas = [
     n: "01",
     nombre: "Galería de los Murciélagos",
     desc: "Sala de más de 15 m de altura por la que salen cada noche miles de murciélagos — se calculan unos 18.000, de 12 especies distintas.",
+    foto: "/img/pileta-murcielagos.webp",
   },
   {
     n: "02",
     nombre: "Sala del Castillo",
     desc: "Amplia sala con una gran formación calcárea que recuerda a un castillo. Restos cerámicos del Neolítico y la Edad del Metal, entre 3.000 y 9.000 años.",
+    foto: null,
   },
   {
     n: "03",
     nombre: "Nave Central",
     desc: "60 metros de longitud, hasta 15 m de altura. Aquí comienzan las pinturas: símbolos solutrenses de hace unos 22.000 años y figuras de caballos en ocre y rojo.",
+    foto: null,
   },
   {
     n: "04",
     nombre: "Las Termópilas",
     desc: "Paso estrecho que conecta con el Salón del Lago. Temperatura constante todo el año, con humedad relativa superior al 60% en época seca.",
+    foto: "/img/pileta-pasillo-luz.webp",
   },
   {
     n: "05",
     nombre: "Salón del Lago",
     desc: "Lago subterráneo con pinturas de tres bóvidos de distintas épocas del Paleolítico (entre 10.000 y 40.000 años) y, frente al lago, signos neolíticos de unos 5.000 años.",
+    foto: null,
   },
   {
     n: "06",
     nombre: "El Desfiladero",
     desc: "Pasillo estrecho de 7-8 m de altura donde parece que la cueva termina — pero da paso a las salas más importantes del recorrido. Concentración de signos abstractos, de los más antiguos de la cueva.",
+    foto: "/img/pileta-pasillo-estalactitas.webp",
   },
   {
     n: "07",
     nombre: "Los Órganos",
     desc: "Formación donde estalactitas y estalagmitas se fusionan en columnas con forma de tubos de órgano.",
+    foto: "/img/pileta-organos.webp",
   },
   {
     n: "08",
     nombre: "Baño de la Reina Mora",
     desc: "Pequeño lago de agua cristalina que se mantiene a 12 °C constantes, con reflejos y goteo continuo. Apenas hay pinturas, pero es uno de los rincones más bonitos del recorrido.",
+    foto: "/img/pileta-formacion-cuenco.webp",
   },
   {
     n: "09",
     nombre: "Sala del Pez",
     desc: "Una de las salas más grandes de la cueva, con pintura neolítica y de la Edad del Metal (entre 3.000 y 9.000 años). Al fondo, el gran Pez de 1,20 m, datado en unos 20.000 años y de características marinas, con una foca pintada en su interior — una de las representaciones más singulares del arte rupestre europeo. También hay figuras de lince y cabras, del Paleolítico (entre 10.000 y 40.000 años).",
+    foto: "/img/pileta-pintura-pez.webp",
   },
 ] as const
 
@@ -152,7 +161,7 @@ export const recomendaciones = [
   "Se facilita una lámpara portátil — no hay luz eléctrica en el interior",
   "Máximo 20 personas por grupo",
   "Presentarse 15 minutos antes en la puerta de la cueva — llegar tarde por quedarse en el parking no es excusa, la reserva se anula automáticamente",
-  "Prohibido fotografiar con flash",
+  "No se permite ningún tipo de cámara ni móvil durante la visita — no se pueden hacer fotos",
   "Prohibido tocar paredes o formaciones",
 ] as const
 
@@ -281,7 +290,7 @@ export const faqs = [
   },
   {
     q: "¿Se pueden hacer fotos?",
-    a: "Sí, pero sin flash. El flash daña los pigmentos del arte rupestre. Tampoco se permite tocar las paredes ni las formaciones.",
+    a: "No. No se permite el uso de cámaras ni móviles durante la visita, para proteger las pinturas y la experiencia del recorrido. Tampoco se permite tocar las paredes ni las formaciones.",
   },
   {
     q: "¿Qué pasa si no llegamos a tiempo?",
@@ -306,7 +315,7 @@ export const timelineHistoria = [
   { anio: "1934", hito: "Venus de Benaoján", desc: "Hallazgo de la figura femenina hoy expuesta en el Museo de Málaga." },
   { anio: "1985", hito: "BIC", desc: "Declarada Bien de Interés Cultural por la legislación española de patrimonio." },
   { anio: "1992", hito: "Galería virgen", desc: "Descubrimiento de una galería virgen de 250 metros, intacta desde la prehistoria." },
-  { anio: "Hoy", hito: "Cuarta generación", desc: "Rosario y José Tomás Bullón Almagro custodian el yacimiento — 120 años en manos de la misma familia." },
+  { anio: "Hoy", hito: "Quinta generación", desc: "Rosario y José Tomás Bullón Almagro custodian el yacimiento — 120 años en manos de la misma familia." },
 ] as const
 
 export const SITE = {

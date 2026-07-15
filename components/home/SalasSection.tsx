@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, MapPin } from "lucide-react"
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll"
@@ -31,19 +32,32 @@ export function SalasSection() {
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {salas.map((s, i) => (
             <RevealOnScroll key={s.n} delay={0.05 + (i % 3) * 0.05}>
-              <article className="group h-full rounded-2xl bg-white border border-brand-blue/15 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-sm hover:border-brand-blue/30">
-                <div className="flex items-baseline gap-3">
-                  <span className="font-display text-4xl text-brand-blue leading-none">
-                    {s.n}
-                  </span>
-                  <span className="h-px flex-1 bg-brand-blue/15" />
+              <article className="group h-full rounded-2xl bg-white border border-brand-blue/15 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-sm hover:border-brand-blue/30">
+                {s.foto && (
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <Image
+                      src={s.foto}
+                      alt={s.nombre}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                )}
+                <div className="p-6">
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-display text-4xl text-brand-blue leading-none">
+                      {s.n}
+                    </span>
+                    <span className="h-px flex-1 bg-brand-blue/15" />
+                  </div>
+                  <h3 className="mt-4 font-semibold text-lg text-brand-text leading-snug">
+                    {s.nombre}
+                  </h3>
+                  <p className="mt-2 text-sm text-brand-text-muted leading-relaxed">
+                    {s.desc}
+                  </p>
                 </div>
-                <h3 className="mt-4 font-semibold text-lg text-brand-text leading-snug">
-                  {s.nombre}
-                </h3>
-                <p className="mt-2 text-sm text-brand-text-muted leading-relaxed">
-                  {s.desc}
-                </p>
               </article>
             </RevealOnScroll>
           ))}
